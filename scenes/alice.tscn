@@ -20,3 +20,6 @@ DIE: Deal 20 attack to all opponent red cards"
 position = Vector2(2.08165e-12, -234)
 scale = Vector2(0.27, 0.27)
 texture = ExtResource("2_c4xhk")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

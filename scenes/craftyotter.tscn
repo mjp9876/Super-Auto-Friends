@@ -21,3 +21,6 @@ HURT: +1 hp for each other green card in your team"
 position = Vector2(2.08165e-12, -234)
 scale = Vector2(0.56, 0.56)
 texture = ExtResource("2_kgyd2")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

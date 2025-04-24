@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd0wqypxeuuix"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_hjq57"]
+[ext_resource type="Texture2D" uid="uid://dswb7uut0j7d0" path="res://assets/friends/Classic Matt Phillips Jumper.png" id="2_6fofy"]
+[ext_resource type="Script" path="res://scripts/friends/classic_matt_phillips_jumper.gd" id="2_37h6a"]
+
+[node name="Classic Matt Phillips Jumper" instance=ExtResource("1_hjq57")]
+script = ExtResource("2_37h6a")
+card_name = "Classic Matt Phillips Jumper"
+cost = 5
+hp = 15
+attack = 2
+x = 2
+target = 2
+ability = "END TURN: Give the friend ahead +1 hp for each red friend in your team"
+upgradedAbility = "END TURN: Give all red cards +1 hp for each non-red card"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -240)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("2_6fofy")
+
+[node name="name" parent="text" index="4"]
+theme_override_font_sizes/font_size = 32
+
+[node name="ability" parent="text" index="5"]
+offset_top = 168.0
