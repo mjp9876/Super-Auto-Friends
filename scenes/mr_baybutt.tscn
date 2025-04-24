@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnrx8daxiinol"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_ycgde"]
+[ext_resource type="Texture2D" uid="uid://cu8bdwj1fv3fg" path="res://assets/friends/Mr. Baybutt.png" id="2_07751"]
+[ext_resource type="Script" path="res://scripts/friends/mr_baybutt.gd" id="2_ai7ux"]
+
+[node name="Mr Baybutt" instance=ExtResource("1_ycgde")]
+script = ExtResource("2_ai7ux")
+card_name = "Mr. Baybutt"
+cost = 9
+hp = 25
+attack = 2
+x = 4
+target = 2
+colour = 2
+ability = "END TURN: Give friend ahead +2 attack"
+upgradedAbility = "END TURN: Give 2 friends ahead +2 attack"
+catagory = 10
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -236)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_07751")

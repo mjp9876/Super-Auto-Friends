@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://boe4f6xlkdis1"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_lrgjb"]
+[ext_resource type="Script" path="res://scripts/friends/badminton.gd" id="2_8anyy"]
+[ext_resource type="Texture2D" uid="uid://07uonven70hf" path="res://assets/friends/Badminton.png" id="2_pkgu1"]
+
+[node name="Badminton" instance=ExtResource("1_lrgjb")]
+script = ExtResource("2_8anyy")
+card_name = "Badminton"
+cost = 9
+hp = 20
+attack = 5
+x = 2
+target = 10
+ability = "BUY: Make two random friends in the shop cost 0 coin"
+upgradedAbility = "USE ITEM: Make a random friend in the shop cost 0 coin"
+catagory = 3
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -228)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("2_pkgu1")

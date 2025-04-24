@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cijp0pdwmx6a1"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_x5dan"]
+[ext_resource type="Script" path="res://scripts/friends/via_macdab.gd" id="2_kitt1"]
+[ext_resource type="Texture2D" uid="uid://d1tfp4nsaiscr" path="res://assets/friends/via macnab.png" id="2_mlf32"]
+
+[node name="Via Macdab" instance=ExtResource("1_x5dan")]
+script = ExtResource("2_kitt1")
+card_name = "Via Macdab"
+cost = 7
+hp = 17
+attack = 2
+x = 3
+colour = 2
+ability = "DIE: Deal 10 attack to 4 random opponent cards"
+upgradedAbility = "DIE: Deal 14 attack to 7 random opponent cards"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_mlf32")

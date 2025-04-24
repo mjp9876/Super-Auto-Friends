@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbnshkgtjp1wt"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_yyvfc"]
+[ext_resource type="Script" path="res://scripts/friends/dr_haddock.gd" id="2_m3n3k"]
+[ext_resource type="Texture2D" uid="uid://dlb18i50vtqne" path="res://assets/friends/Dr. Haddock.png" id="2_q1q5c"]
+
+[node name="Dr Haddock" instance=ExtResource("1_yyvfc")]
+script = ExtResource("2_m3n3k")
+card_name = "Dr. Haddock"
+cost = 6
+hp = 28
+attack = 5
+x = 2
+target = 3
+colour = 1
+ability = "START BATTLE: Didn't win last battle: Remove the ability of the two cards with the most hp in each opponent team"
+upgradedAbility = "START BATTLE: Didn't win last battle: Remove the ability of the three cards with the most hp in each opponent team"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -233)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("2_q1q5c")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

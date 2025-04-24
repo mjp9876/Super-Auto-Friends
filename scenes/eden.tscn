@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://4j7jq2s0w6dk"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_jfs0p"]
+[ext_resource type="Texture2D" uid="uid://bb1t6qkdhluxn" path="res://assets/friends/eden.png" id="2_4unwr"]
+[ext_resource type="Script" path="res://scripts/friends/eden.gd" id="2_j3ng1"]
+
+[node name="Eden" instance=ExtResource("1_jfs0p")]
+script = ExtResource("2_j3ng1")
+card_name = "Eden"
+cost = 8
+hp = 25
+attack = 2
+x = 3
+target = 1
+ability = "BUY: Gain one random: (+15 hp , +45 hp , +1 attack , +8 attack , +3 X )"
+upgradedAbility = "START BATTLE: Gain one random: (+20 hp , +3 attack , +2 X )"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_4unwr")

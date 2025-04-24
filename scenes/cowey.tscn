@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://k7w83hk47e7p"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_odej8"]
+[ext_resource type="Script" path="res://scripts/friends/cowey.gd" id="2_gjf1o"]
+[ext_resource type="Texture2D" uid="uid://cj5li07ny44em" path="res://assets/friends/Cowey.png" id="2_puwau"]
+
+[node name="Cowey" instance=ExtResource("1_odej8")]
+script = ExtResource("2_gjf1o")
+card_name = "Cowey"
+cost = 11
+hp = 39
+attack = 4
+x = 3
+target = 6
+ability = "KILL: +26 hp"
+upgradedAbility = "KILL: +44 hp"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -233)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("2_puwau")

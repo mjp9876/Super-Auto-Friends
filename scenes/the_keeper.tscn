@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnnd4qkoadwqn"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_8ttvi"]
+[ext_resource type="Texture2D" uid="uid://b5eq8hu5r7rf1" path="res://assets/friends/the keeper.png" id="2_guk7j"]
+[ext_resource type="Script" path="res://scripts/friends/the_keeper.gd" id="2_s31gs"]
+
+[node name="The Keeper" instance=ExtResource("1_8ttvi")]
+script = ExtResource("2_s31gs")
+card_name = "The Keeper"
+cost = 6
+hp = 24
+attack = 8
+x = 1
+target = 3
+colour = 1
+ability = "START TURN: Gain between 1 - 6 coin"
+upgradedAbility = "START TURN: Gain between 4 - 6 coin"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(1, 1)
+texture = ExtResource("2_guk7j")

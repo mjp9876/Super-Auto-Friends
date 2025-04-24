@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyvqyemfl32ug"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_5mtmu"]
+[ext_resource type="Script" path="res://scripts/friends/sackable_offense.gd" id="2_jsxgx"]
+[ext_resource type="Texture2D" uid="uid://ikn3xv482wvy" path="res://assets/friends/Sackable Offense.png" id="2_noe2b"]
+
+[node name="Sackable Offense" instance=ExtResource("1_5mtmu")]
+script = ExtResource("2_jsxgx")
+card_name = "Sackable Offense"
+cost = 3
+hp = 16
+attack = 1
+x = 1
+target = 3
+ability = "HURT: Gain 1 random: (+1 coin , +2 coin , +4 hp , Die)"
+upgradedAbility = "HURT: Gain 1 random: (+1 coin , +2 coin  , +4 hp , +8 hp , +9 attack , Die)"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_noe2b")

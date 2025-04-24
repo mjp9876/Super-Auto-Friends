@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt5tlbnopk8jp"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_4wo0q"]
+[ext_resource type="Texture2D" uid="uid://jq313lffpyau" path="res://assets/friends/Craftyotter.png" id="2_kgyd2"]
+[ext_resource type="Script" path="res://scripts/friends/lottie.gd" id="2_mcs23"]
+
+[node name="Lottie" instance=ExtResource("1_4wo0q")]
+script = ExtResource("2_mcs23")
+card_name = "Craftyotter"
+cost = 8
+hp = 37
+attack = 3
+x = 3
+colour = 2
+ability = "END TURN: Make the friend ahead green 
+START BATTLE: +3 hp for each other green card in your team"
+upgradedAbility = "END TURN: Make the friend ahead green 
+HURT: +1 hp for each other green card in your team"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("2_kgyd2")

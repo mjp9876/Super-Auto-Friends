@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://h4ygtjy0k0ni"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_5iu1u"]
+[ext_resource type="Script" path="res://scripts/friends/king_de_de_de.gd" id="2_14ky2"]
+[ext_resource type="Texture2D" uid="uid://c4476gq7xbonx" path="res://assets/friends/King DeDeDe.png" id="2_glsia"]
+
+[node name="King DeDeDe" instance=ExtResource("1_5iu1u")]
+script = ExtResource("2_14ky2")
+card_name = "King DeDeDe"
+cost = 8
+hp = 40
+attack = 16
+x = 1
+target = 1
+colour = 2
+ability = "reroll_icon : Give green cards in the shop +1 attack"
+upgradedAbility = "reroll_icon : Give green cards in the shop +15 hp +1 attack"
+catagory = 11
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -228)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("2_glsia")

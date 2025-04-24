@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7uxvwcdeh4i8"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_a3cys"]
+[ext_resource type="Script" path="res://scripts/friends/meal_deal.gd" id="2_c714v"]
+[ext_resource type="Texture2D" uid="uid://cha3iyd26egsb" path="res://assets/friends/Meal Deal.png" id="2_m8xm1"]
+
+[node name="Meal Deal" instance=ExtResource("1_a3cys")]
+script = ExtResource("2_c714v")
+card_name = "Meal Deal"
+cost = 5
+hp = 3
+attack = 3
+x = 1
+target = 2
+colour = 2
+ability = "END TURN: Give all blue friends in your team +3 hp"
+upgradedAbility = "END TURN: Give all blue and green  friends in your team +3 hp"
+catagory = 9
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("2_m8xm1")

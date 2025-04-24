@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0c7pae3odfri"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_i2xp4"]
+[ext_resource type="Texture2D" uid="uid://cx02mlphdaher" path="res://assets/friends/Ella.png" id="2_2iqbl"]
+[ext_resource type="Script" path="res://scripts/friends/ella.gd" id="2_gyxy8"]
+
+[node name="Ella" instance=ExtResource("1_i2xp4")]
+script = ExtResource("2_gyxy8")
+card_name = "Ella"
+cost = 7
+hp = 32
+attack = 3
+x = 3
+ability = "END TURN: Make the friend ahead red 
+START BATTLE: +3 hp for each red card in your team"
+upgradedAbility = "END TURN: Make the friend ahead red 
+START BATTLE: +7 hp for each red card in your team"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -233)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("2_2iqbl")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

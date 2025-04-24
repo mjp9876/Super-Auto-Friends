@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cinyr16ysmxcp"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_funly"]
+[ext_resource type="Script" path="res://scripts/friends/one_cut_of_the_dead.gd" id="2_wdgai"]
+[ext_resource type="Texture2D" uid="uid://droqywml33lmf" path="res://assets/friends/One Cut Of The Dead.png" id="2_xxdjr"]
+
+[node name="One Cut Of The Dead" instance=ExtResource("1_funly")]
+script = ExtResource("2_wdgai")
+card_name = "One Cut Of The Dead"
+cost = 3
+hp = 13
+x = 3
+colour = 2
+ability = "HURT: +1 attack"
+upgradedAbility = "HURT: +2 attack"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -231)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("2_xxdjr")

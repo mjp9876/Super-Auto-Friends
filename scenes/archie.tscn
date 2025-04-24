@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcryph78e52a"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_uyajx"]
+[ext_resource type="Script" path="res://scripts/friends/archie.gd" id="2_12tir"]
+[ext_resource type="Texture2D" uid="uid://b46r8t4lmhxg4" path="res://assets/friends/Archie.png" id="2_tyda7"]
+
+[node name="Archie" instance=ExtResource("1_uyajx")]
+script = ExtResource("2_12tir")
+card_name = "Archie"
+cost = 8
+hp = 40
+attack = 5
+x = 3
+target = 6
+colour = 3
+ability = "SELL: Give all friends in your team +2 attack"
+upgradedAbility = "SELL: Give all friends in your team +1 X"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -236)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_tyda7")

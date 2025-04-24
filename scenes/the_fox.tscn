@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://206j36dpg3v7"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_ygq2s"]
+[ext_resource type="Script" path="res://scripts/friends/the_fox.gd" id="2_hp2c7"]
+[ext_resource type="Texture2D" uid="uid://befx6gf5yhkev" path="res://assets/friends/the Fox.png" id="2_uohy7"]
+
+[node name="The Fox" instance=ExtResource("1_ygq2s")]
+script = ExtResource("2_hp2c7")
+card_name = "The Fox"
+cost = 4
+hp = 23
+attack = 2
+x = 2
+target = 1
+colour = 3
+ability = "START BATTLE: Give 3 random friends in your team -3 hp +2 attack"
+upgradedAbility = "START BATTLE: Give all other friends in your team -3 hp +2 attack"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -236)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("2_uohy7")

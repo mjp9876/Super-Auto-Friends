@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dacvqw3gjoohc"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_5d4gg"]
+[ext_resource type="Script" path="res://scripts/friends/catan.gd" id="2_dpvd0"]
+[ext_resource type="Texture2D" uid="uid://dvtequ8rbwtjk" path="res://assets/friends/Catan.png" id="2_ltkic"]
+
+[node name="Catan" instance=ExtResource("1_5d4gg")]
+script = ExtResource("2_dpvd0")
+card_name = "Catan"
+cost = 4
+hp = 4
+attack = 2
+x = 2
+target = 4
+colour = 3
+ability = "END TURN: Give all current and future friends in the shop +2 hp"
+upgradedAbility = "END TURN: Give all current and future friends in the shop +4 hp"
+catagory = 1
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -236)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ltkic")

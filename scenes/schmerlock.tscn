@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu4rbhg811l65"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_kdmi0"]
+[ext_resource type="Texture2D" uid="uid://de882vs6f1m7g" path="res://assets/friends/Schmerlock.png" id="2_5ib86"]
+[ext_resource type="Script" path="res://scripts/friends/schmerlock.gd" id="2_h4rtw"]
+
+[node name="Schmerlock" instance=ExtResource("1_kdmi0")]
+script = ExtResource("2_h4rtw")
+card_name = "Schmerlock"
+cost = 9
+hp = 20
+attack = 5
+x = 2
+target = 8
+colour = 1
+ability = "START BATTLE: Remove 50% of hp from the opponent card with the most hp two times"
+upgradedAbility = "START BATTLE: Remove 50% of hp from the opponent card with the most hp four times"
+catagory = 12
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -236)
+scale = Vector2(0.56, 0.56)
+texture = ExtResource("2_5ib86")

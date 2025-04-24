@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq7ikvk1s14i1"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_g7ccs"]
+[ext_resource type="Script" path="res://scripts/friends/troglodyte.gd" id="2_la38b"]
+[ext_resource type="Texture2D" uid="uid://bl37hslou1lbe" path="res://assets/friends/Troglodyte.png" id="2_sic5g"]
+
+[node name="Troglodyte" instance=ExtResource("1_g7ccs")]
+script = ExtResource("2_la38b")
+card_name = "Troglodyte"
+cost = 5
+hp = 31
+attack = 7
+x = 2
+target = 2
+colour = 2
+ability = "AFTER ATTACK: -2 attack (Minimum 1)"
+upgradedAbility = "AFTER ATTACK: -1 attack (Minimum 1)"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("2_sic5g")

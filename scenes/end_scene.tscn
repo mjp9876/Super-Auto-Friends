@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyt1spqfuf4ec"]
+
+[ext_resource type="Script" path="res://scripts/end_scene.gd" id="1_6bsfk"]
+[ext_resource type="Texture2D" uid="uid://ijnwxay3h2o7" path="res://assets/shopBackground.png" id="1_txwqo"]
+[ext_resource type="Texture2D" uid="uid://dvtf233ndtnfe" path="res://assets/card_icons/win_icon.png" id="3_vwgye"]
+
+[node name="EndScene" type="Node2D"]
+script = ExtResource("1_6bsfk")
+
+[node name="background" type="Sprite2D" parent="."]
+texture = ExtResource("1_txwqo")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -212.0
+offset_top = -351.0
+offset_right = 218.0
+offset_bottom = -214.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "WINNER!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="wins1" type="Sprite2D" parent="."]
+position = Vector2(-400, 200)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_vwgye")
+
+[node name="wins2" type="Sprite2D" parent="."]
+position = Vector2(-137, 200)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_vwgye")
+
+[node name="wins3" type="Sprite2D" parent="."]
+position = Vector2(137, 200)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_vwgye")
+
+[node name="wins4" type="Sprite2D" parent="."]
+position = Vector2(400, 200)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_vwgye")
+
+[node name="win_num1" type="Label" parent="."]
+offset_left = -458.0
+offset_top = 101.0
+offset_right = -337.0
+offset_bottom = 238.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="win_num2" type="Label" parent="."]
+offset_left = -198.0
+offset_top = 98.0
+offset_right = -77.0
+offset_bottom = 235.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="win_num3" type="Label" parent="."]
+offset_left = 75.0
+offset_top = 101.0
+offset_right = 196.0
+offset_bottom = 238.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="win_num4" type="Label" parent="."]
+offset_left = 341.0
+offset_top = 99.0
+offset_right = 462.0
+offset_bottom = 236.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1

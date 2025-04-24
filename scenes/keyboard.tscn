@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://y4r8qmkrh2lf"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_01qk3"]
+[ext_resource type="Texture2D" uid="uid://cnxwol20psu8f" path="res://assets/friends/Keyboard.png" id="2_0acoq"]
+[ext_resource type="Script" path="res://scripts/friends/keyboard.gd" id="2_oo3sr"]
+
+[node name="Keyboard" instance=ExtResource("1_01qk3")]
+script = ExtResource("2_oo3sr")
+card_name = "Keyboard"
+cost = 3
+hp = 1
+attack = 2
+x = 3
+colour = 1
+ability = "KILL: +n (N) coin 
+START TURN: n + 1 (Maximum 4)"
+upgradedAbility = "KILL: +n (N) coin 
+START TURN: n + 1 (Maximum 6)"
+catagory = 8
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -240)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_0acoq")

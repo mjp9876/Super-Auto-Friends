@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwx7tjf0e5n7e"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_dfavl"]
+[ext_resource type="Script" path="res://scripts/friends/pikachu.gd" id="2_4wdwq"]
+[ext_resource type="Texture2D" uid="uid://e0nk1x2y85qg" path="res://assets/friends/Pikachu.png" id="2_14gfo"]
+
+[node name="Pikachu" instance=ExtResource("1_dfavl")]
+script = ExtResource("2_4wdwq")
+card_name = "Pikachu"
+cost = 7
+hp = 9
+attack = 3
+x = 4
+target = 5
+colour = 3
+ability = "BUY YELLOW CARD: Give it +8 hp +1 attack"
+upgradedAbility = "BUY YELLOW CARD: Upgrade it and give it +8 hp +1 attack"
+catagory = 11
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("2_14gfo")

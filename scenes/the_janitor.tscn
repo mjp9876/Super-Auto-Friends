@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://vs73xgkcxd4r"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_54eh6"]
+[ext_resource type="Script" path="res://scripts/friends/the_janitor.gd" id="2_iyp5f"]
+[ext_resource type="Texture2D" uid="uid://v00boih2xfir" path="res://assets/friends/The Janitor.png" id="2_w2w5n"]
+
+[node name="The Janitor" instance=ExtResource("1_54eh6")]
+script = ExtResource("2_iyp5f")
+card_name = "The Janitor"
+cost = 5
+hp = 24
+attack = 3
+x = 2
+target = 3
+ability = "reroll_icon : +1 attack until the start of next turn"
+upgradedAbility = "reroll_icon : +n attack until the start of next turn (n = cost of reroll)"
+catagory = 12
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -237)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_w2w5n")

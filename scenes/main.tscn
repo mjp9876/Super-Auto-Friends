@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://blppvly21g5pr"]
+
+[ext_resource type="PackedScene" uid="uid://dpkrdb87nol5p" path="res://scenes/gameShop.tscn" id="2_fv2st"]
+[ext_resource type="PackedScene" uid="uid://c3uk5eea6bsd4" path="res://scenes/Select Leader.tscn" id="3_2nu4k"]
+[ext_resource type="PackedScene" uid="uid://cyt1spqfuf4ec" path="res://scenes/end_scene.tscn" id="3_857lw"]
+
+[node name="Main" type="Node2D" groups=["main"]]
+
+[node name="GameShop" parent="." instance=ExtResource("2_fv2st")]
+visible = false
+
+[node name="SelectLeader" parent="." instance=ExtResource("3_2nu4k")]
+
+[node name="EndScene" parent="." instance=ExtResource("3_857lw")]
+visible = false
+scale = Vector2(5, 5)

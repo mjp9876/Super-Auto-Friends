@@ -1,0 +1,209 @@
+[gd_scene load_steps=12 format=3 uid="uid://4nomrhfh7i7l"]
+
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_7utru"]
+[ext_resource type="Texture2D" uid="uid://b4ft5pied677a" path="res://assets/card_icons/card_background.png" id="1_22oki"]
+[ext_resource type="Texture2D" uid="uid://l324mx35p05q" path="res://icon.svg" id="2_p3gb3"]
+[ext_resource type="Texture2D" uid="uid://b4gft1n00kb5n" path="res://assets/card_icons/card_stats_box.png" id="3_01esx"]
+[ext_resource type="Texture2D" uid="uid://52u0v5wq8yf2" path="res://assets/card_icons/image_top_hider.png" id="4_dvy7o"]
+[ext_resource type="Texture2D" uid="uid://chylvaiimdj8r" path="res://assets/card_icons/clockwise_target_icon.png" id="4_kw3ym"]
+[ext_resource type="Texture2D" uid="uid://djrm5ucjygbsf" path="res://assets/card_icons/cost_icon.png" id="5_thd2f"]
+[ext_resource type="Texture2D" uid="uid://biwkuvq8kxq46" path="res://assets/card_icons/HP_icon.png" id="6_3jio7"]
+[ext_resource type="Texture2D" uid="uid://b2h2ikc3g024k" path="res://assets/card_icons/item_ability_box.png" id="7_17e6y"]
+[ext_resource type="Texture2D" uid="uid://bb3mg2r88j6jc" path="res://assets/card_icons/lock_icon.png" id="9_pobng"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebv6k"]
+size = Vector2(600, 800)
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_7utru")
+card_name = "Name"
+ability = "N/A"
+
+[node name="background" type="Sprite2D" parent="."]
+texture = ExtResource("1_22oki")
+
+[node name="image" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, -230)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("2_p3gb3")
+region_rect = Rect2(2.08165e-12, 2.08165e-12, 200, 200)
+
+[node name="image_top_hider" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, -384)
+texture = ExtResource("4_dvy7o")
+
+[node name="stats_box" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, 120)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("3_01esx")
+
+[node name="target" type="Sprite2D" parent="stats_box"]
+position = Vector2(215, -215)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_kw3ym")
+
+[node name="item_stats_box" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2.08165e-12, 120)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("7_17e6y")
+
+[node name="cost" type="Sprite2D" parent="."]
+position = Vector2(-200, -300)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("5_thd2f")
+
+[node name="hp" type="Sprite2D" parent="."]
+position = Vector2(200, -300)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("6_3jio7")
+
+[node name="text" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="cost" type="Label" parent="text"]
+layout_mode = 0
+offset_left = -259.0
+offset_top = -360.0
+offset_right = -138.0
+offset_bottom = -235.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hp" type="Label" parent="text"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = -357.0
+offset_right = 265.0
+offset_bottom = -241.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="attack" type="Label" parent="text"]
+layout_mode = 0
+offset_left = -204.0
+offset_top = -85.0
+offset_right = -73.0
+offset_bottom = 46.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="x" type="Label" parent="text"]
+layout_mode = 0
+offset_left = -33.0
+offset_top = -81.0
+offset_right = 95.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="text"]
+layout_mode = 0
+offset_left = -211.0
+offset_top = 67.0
+offset_right = 209.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "NAME
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ability" type="RichTextLabel" parent="text"]
+layout_mode = 0
+offset_left = -210.0
+offset_top = 139.0
+offset_right = 210.0
+offset_bottom = 330.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 1
+bbcode_enabled = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="item_text" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="cost" type="Label" parent="item_text"]
+layout_mode = 0
+offset_left = -260.0
+offset_top = -365.0
+offset_right = -139.0
+offset_bottom = -240.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="name" type="Label" parent="item_text"]
+layout_mode = 0
+offset_left = -210.0
+offset_top = -80.0
+offset_right = 210.0
+offset_bottom = -5.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 38
+text = "NAME
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ability" type="RichTextLabel" parent="item_text"]
+layout_mode = 0
+offset_left = -210.0
+offset_right = 210.0
+offset_bottom = 312.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/bold_italics_font_size = 1
+bbcode_enabled = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="lock" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("9_pobng")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="card_collision" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ebv6k")
+
+[node name="swing_time" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true
+
+[node name="proc_timer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
+[node name="proc_timer_cooldown" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="gui_input" from="text/ability" to="." method="_on_ability_gui_input"]
+[connection signal="mouse_entered" from="text/ability" to="." method="_on_ability_mouse_entered"]
+[connection signal="gui_input" from="item_text/ability" to="." method="_on_ability_gui_input"]
+[connection signal="mouse_entered" from="item_text/ability" to="." method="_on_ability_mouse_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="timeout" from="swing_time" to="." method="_on_swing_time_timeout"]

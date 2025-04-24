@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://h2u7wd2goxpi"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_cfrne"]
+[ext_resource type="Script" path="res://scripts/friends/ben.gd" id="2_aobv1"]
+[ext_resource type="Texture2D" uid="uid://dwhve3i8ckxja" path="res://assets/friends/Ben.png" id="2_lo6s4"]
+
+[node name="Ben" instance=ExtResource("1_cfrne")]
+script = ExtResource("2_aobv1")
+card_name = "Ben"
+cost = 4
+hp = 24
+attack = 2
+x = 3
+colour = 1
+ability = "START BATTLE: Remove 33% hp from the opponent with the most hp two times"
+upgradedAbility = "START BATTLE: Remove 50% hp from the opponent with the most hp three times"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("2_lo6s4")

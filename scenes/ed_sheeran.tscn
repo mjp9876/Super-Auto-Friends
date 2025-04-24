@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bohedfoii4j0c"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_l2fdx"]
+[ext_resource type="Script" path="res://scripts/friends/ed_sheeran.gd" id="2_40k43"]
+[ext_resource type="Texture2D" uid="uid://7uq3u3ftwe3b" path="res://assets/friends/Ed Sheeran.png" id="2_42hxq"]
+
+[node name="Ed Sheeran" instance=ExtResource("1_l2fdx")]
+script = ExtResource("2_40k43")
+card_name = "Ed Sheeran"
+cost = 5
+hp = 29
+attack = 2
+x = 3
+colour = 3
+ability = "reroll_icon : Make two random friends in the shop blue"
+upgradedAbility = "reroll_icon : Make four random friends in the shop blue"
+catagory = 8
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -232)
+scale = Vector2(0.62, 0.62)
+texture = ExtResource("2_42hxq")

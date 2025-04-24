@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbasw7il5a4gi"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_302lg"]
+[ext_resource type="Script" path="res://scripts/friends/captain.gd" id="2_ki3ni"]
+[ext_resource type="Texture2D" uid="uid://cckgt6f8e7030" path="res://assets/friends/Captain.png" id="2_q8gob"]
+
+[node name="Captain" instance=ExtResource("1_302lg")]
+script = ExtResource("2_ki3ni")
+card_name = "Captain"
+cost = 3
+hp = 12
+attack = 2
+x = 2
+target = 1
+ability = "START TURN: Discount items in the shop by 2 coin"
+upgradedAbility = "START TURN: Discount items and unlocked friends in the shop by 2 coin"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.69, 0.69)
+texture = ExtResource("2_q8gob")

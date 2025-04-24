@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6h4jycvbiubu"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_n4yc7"]
+[ext_resource type="Texture2D" uid="uid://db3fphcnvx27j" path="res://assets/friends/January 5th.png" id="2_p5ppa"]
+[ext_resource type="Script" path="res://scripts/friends/january_5_th.gd" id="2_smtkc"]
+
+[node name="January 5th" instance=ExtResource("1_n4yc7")]
+script = ExtResource("2_smtkc")
+card_name = "January 5th"
+cost = 5
+hp = 1
+attack = 5
+x = 1
+target = 2
+ability = "START TURN: Give all other blue cards in your team +1 attack , if you have at least 3 other blue friends, block ability"
+upgradedAbility = "START TURN: Give all other blue cards in your team +5 hp +1 attack , if you have at least 4 other blue friends, block ability"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_p5ppa")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

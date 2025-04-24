@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bycd5np3epesm"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_3y2bw"]
+[ext_resource type="Texture2D" uid="uid://csjo0htsll5o8" path="res://assets/friends/ollie.png" id="2_o2t5k"]
+[ext_resource type="Script" path="res://scripts/friends/ollie.gd" id="2_oq756"]
+
+[node name="Ollie" instance=ExtResource("1_3y2bw")]
+script = ExtResource("2_oq756")
+card_name = "Ollie"
+cost = 6
+hp = 16
+attack = 4
+x = 1
+target = 2
+colour = 3
+ability = "START BATTLE: Deal n (N) attack to a random card of each opponent
+START TURN: n + 3"
+upgradedAbility = "START BATTLE: Deal n (N) attack to a random card of each opponent
+START TURN: n + 6"
+n = 7
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_o2t5k")

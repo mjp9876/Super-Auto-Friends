@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://coqct0p3wk6sp"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_22y6g"]
+[ext_resource type="Texture2D" uid="uid://b665fp44o0vr4" path="res://assets/friends/Bristol.png" id="2_kijsj"]
+[ext_resource type="Script" path="res://scripts/friends/bristol.gd" id="2_yftkg"]
+
+[node name="Bristol" instance=ExtResource("1_22y6g")]
+script = ExtResource("2_yftkg")
+card_name = "Bristol"
+cost = 7
+hp = 24
+attack = 4
+x = 2
+target = 3
+colour = 2
+ability = "START TURN: +4 coin"
+upgradedAbility = "START TURN: +6 coin"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.48, 0.48)
+texture = ExtResource("2_kijsj")

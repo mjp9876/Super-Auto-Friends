@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://4ukf412o0cbr"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_fubg4"]
+[ext_resource type="Script" path="res://scripts/friends/skribbl_io.gd" id="2_8j815"]
+[ext_resource type="Texture2D" uid="uid://brghjv3bfcdmo" path="res://assets/friends/Skribblio.png" id="2_8kcw1"]
+
+[node name="Skribbl_io" instance=ExtResource("1_fubg4")]
+script = ExtResource("2_8j815")
+card_name = "Skribbl.io"
+cost = 7
+hp = 15
+attack = 2
+x = 5
+target = 4
+colour = 5
+ability = "START TURN: Change colour
+KILL: Make the killed card a random colour"
+upgradedAbility = "START TURN: Become the colour of the friend behind this
+START BATTLE: Randomise all opponent card's colours and targets
+KILL: Make the killed card a random colour"
+catagory = 4
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("2_8kcw1")
+
+[node name="ability" parent="text" index="5"]
+offset_top = 119.0
+theme_override_font_sizes/normal_font_size = 24

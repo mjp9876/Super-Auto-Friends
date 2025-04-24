@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxp4nus0cg0lv"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_s5wch"]
+[ext_resource type="Script" path="res://scripts/friends/drunk.gd" id="2_mswr8"]
+[ext_resource type="Texture2D" uid="uid://u81y2mrwexey" path="res://assets/friends/Drunk.png" id="2_o3m75"]
+
+[node name="Drunk" instance=ExtResource("1_s5wch")]
+script = ExtResource("2_mswr8")
+card_name = "Drunk"
+cost = 8
+hp = 36
+attack = 5
+x = 3
+target = 1
+ability = "START TURN: Change target
+START BATTLE: Gain one random: (-10 hp , +8 attack )"
+upgradedAbility = "START TURN: Change target
+START BATTLE: Gain one random: (-10 hp , +16 attack , +5 X )"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -236)
+scale = Vector2(0.54, 0.54)
+texture = ExtResource("2_o3m75")

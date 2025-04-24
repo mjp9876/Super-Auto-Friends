@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdhbs0hiq5bv8"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_tyvut"]
+[ext_resource type="Texture2D" uid="uid://cnuombtwsjcrd" path="res://assets/friends/Spaceship.png" id="2_2i5vr"]
+[ext_resource type="Script" path="res://scripts/friends/spaceship.gd" id="2_k27my"]
+
+[node name="Spaceship" instance=ExtResource("1_tyvut")]
+script = ExtResource("2_k27my")
+card_name = "Spaceship"
+cost = 5
+hp = 11
+attack = 1
+x = 3
+target = 1
+colour = 1
+ability = "START BATTLE: +5 hp +1 attack for each red friend in your team"
+upgradedAbility = "START BATTLE: +5 hp +1 attack for each red or yellow friend in your team"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -236)
+scale = Vector2(2.65, 2.65)
+texture = ExtResource("2_2i5vr")

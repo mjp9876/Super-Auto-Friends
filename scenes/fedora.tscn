@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ki7c14thksyc"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_cfqmv"]
+[ext_resource type="Texture2D" uid="uid://b485lqsc1whxj" path="res://assets/friends/Fedora.png" id="2_0mtuf"]
+[ext_resource type="Script" path="res://scripts/friends/fedora.gd" id="2_q3tof"]
+
+[node name="Fedora" instance=ExtResource("1_cfqmv")]
+script = ExtResource("2_q3tof")
+card_name = "Fedora"
+cost = 5
+hp = 12
+attack = 2
+x = 2
+target = 1
+colour = 1
+ability = "END TURN: Give all Maxmorphed_ friends on your team one random: (+4 hp , +1 attack )"
+upgradedAbility = "END TURN: Give all Maxmorphed_ and Schmerlock friends on your team one random: (+4 hp , +1 attack )"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -237)
+scale = Vector2(0.67, 0.67)
+texture = ExtResource("2_0mtuf")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

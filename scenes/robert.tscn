@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3g87cciu5flu"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_48cyr"]
+[ext_resource type="Texture2D" uid="uid://c0poa4id8j0ub" path="res://assets/friends/Robert.png" id="2_ly4g0"]
+[ext_resource type="Script" path="res://scripts/friends/robert.gd" id="2_ti1wo"]
+
+[node name="Robert" instance=ExtResource("1_48cyr")]
+script = ExtResource("2_ti1wo")
+card_name = "Robert"
+cost = 15
+hp = 54
+attack = 5
+x = 3
+colour = 2
+ability = "KILL: +5 coin"
+upgradedAbility = "KILL: Steal 5 coin"
+catagory = 6
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ly4g0")

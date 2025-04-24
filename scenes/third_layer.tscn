@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://baj5mkptd8r24"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_rua4k"]
+[ext_resource type="Script" path="res://scripts/items/third_layer.gd" id="2_tu5bp"]
+[ext_resource type="Texture2D" uid="uid://dyon2p6f0fbqs" path="res://assets/items/Third Layer.png" id="3_lnocn"]
+
+[node name="Third Layer" instance=ExtResource("1_rua4k")]
+script = ExtResource("2_tu5bp")
+card_name = "Third Layer"
+cost = 1
+colour = 4
+ability = "Randomise colour and target"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -238)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_lnocn")
+
+[node name="item_stats_box" parent="." index="4"]
+visible = true
+
+[node name="hp" parent="." index="6"]
+visible = false
+
+[node name="text" parent="." index="7"]
+visible = false
+
+[node name="item_text" parent="." index="8"]
+visible = true

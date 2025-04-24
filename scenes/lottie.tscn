@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfsobkm6qdd0j"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_4wo0q"]
+[ext_resource type="Script" path="res://scripts/friends/craftyotter.gd" id="2_0jbjm"]
+[ext_resource type="Texture2D" uid="uid://buvxiclkkykkv" path="res://assets/friends/Lottie.png" id="3_y57hf"]
+
+[node name="Craftyotter" instance=ExtResource("1_4wo0q")]
+position = Vector2(2.08165e-12, 2.08165e-12)
+script = ExtResource("2_0jbjm")
+card_name = "Lottie"
+cost = 8
+hp = 26
+attack = 5
+x = 2
+target = 5
+colour = 2
+ability = "SELL: Give a random friend in your team +1 attack n (N) times
+START TURN: n + 4"
+upgradedAbility = "SELL: Give a random friend in your team +1 attack n (N) times
+START TURN: n + 8"
+n = 5
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -237)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_y57hf")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjbnr6uq4o6k4"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_htevp"]
+[ext_resource type="Texture2D" uid="uid://ciywchasw6ecn" path="res://assets/friends/Leslie.png" id="2_ecnac"]
+[ext_resource type="Script" path="res://scripts/friends/leslie.gd" id="2_wognd"]
+
+[node name="Leslie" instance=ExtResource("1_htevp")]
+script = ExtResource("2_wognd")
+card_name = "Leslie"
+cost = 9
+hp = 46
+attack = 3
+x = 3
+colour = 3
+ability = "Random events prioritise leader (Not in battle)
+Only items costing 9 coin or more can appear"
+upgradedAbility = "Random events prioritise leader (Not in battle)
+Only items costing 9 coin or more can appear
+END TURN: Give two random friends +2 attack"
+catagory = 5
+upgraded = true
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("2_ecnac")
+
+[node name="ability" parent="text" index="5"]
+offset_top = 116.0
+theme_override_font_sizes/normal_font_size = 24

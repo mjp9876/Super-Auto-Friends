@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqstwqd8a2up4"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_22bsa"]
+[ext_resource type="Texture2D" uid="uid://dc68m4i8uivam" path="res://assets/friends/Martha.png" id="2_kqjl6"]
+[ext_resource type="Script" path="res://scripts/friends/martha.gd" id="2_x7u4y"]
+
+[node name="Martha" instance=ExtResource("1_22bsa")]
+script = ExtResource("2_x7u4y")
+card_name = "Martha"
+cost = 8
+hp = 30
+attack = 4
+x = 2
+target = 5
+colour = 2
+ability = "END TURN: Give 2 other random friends +1 attack"
+upgradedAbility = "END TURN: Give 3 other random friends +1 attack"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -228)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_kqjl6")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2f4no73bgmam"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_ucbtd"]
+[ext_resource type="Texture2D" uid="uid://dow2lfq2uima" path="res://assets/friends/Haddock.png" id="2_3oxh5"]
+[ext_resource type="Script" path="res://scripts/friends/haddock.gd" id="2_mtp43"]
+
+[node name="Haddock" instance=ExtResource("1_ucbtd")]
+script = ExtResource("2_mtp43")
+card_name = "Haddock"
+cost = 1
+hp = 4
+attack = 5
+x = 1
+target = 5
+colour = 1
+ability = "END TURN: Make the friend ahead yellow"
+upgradedAbility = "SELL: Make all friends in the shop yellow"
+catagory = 9
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_3oxh5")

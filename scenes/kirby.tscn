@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://br7jb7m14grqf"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_keyou"]
+[ext_resource type="Texture2D" uid="uid://disyekemjfdkp" path="res://assets/friends/Kirby.png" id="2_f4k3u"]
+[ext_resource type="Script" path="res://scripts/friends/kirby.gd" id="2_f7i7v"]
+
+[node name="Kirby" instance=ExtResource("1_keyou")]
+script = ExtResource("2_f7i7v")
+card_name = "Kirby"
+cost = 4
+hp = 3
+attack = 4
+x = 2
+target = 1
+colour = 3
+ability = "SELL RED OR BLUE CARD: +n hp (n = cost of the card)"
+upgradedAbility = "SELL CARD: +n hp (n = cost of the card)"
+catagory = 11
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -238)
+scale = Vector2(0.44, 0.44)
+texture = ExtResource("2_f4k3u")

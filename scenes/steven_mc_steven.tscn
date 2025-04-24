@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c31vb1nc6dged"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_sadf7"]
+[ext_resource type="Texture2D" uid="uid://dqwal40v77s0o" path="res://assets/friends/Steven McSteven.png" id="2_f10px"]
+[ext_resource type="Script" path="res://scripts/friends/steven_mc_steven.gd" id="2_rjwnb"]
+
+[node name="Steven McSteven" instance=ExtResource("1_sadf7")]
+script = ExtResource("2_rjwnb")
+card_name = "Steven McSteven"
+cost = 2
+hp = 20
+attack = 1
+x = 3
+ability = "START BATTLE: Give ALL cards +1 attack"
+upgradedAbility = "START BATTLE: Give ALL cards +2 attack"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_f10px")

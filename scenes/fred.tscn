@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgcc74jissuay"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_50ypt"]
+[ext_resource type="Script" path="res://scripts/friends/fred.gd" id="2_lxcn3"]
+[ext_resource type="Texture2D" uid="uid://dgxiqc8tfj4yf" path="res://assets/friends/Fred.png" id="2_wkicp"]
+
+[node name="Fred" instance=ExtResource("1_50ypt")]
+script = ExtResource("2_lxcn3")
+card_name = "Fred"
+cost = 3
+hp = 15
+attack = 4
+x = 1
+target = 7
+ability = "FRIEND AHEAD ATTACKS: Deal 1 attack to them"
+upgradedAbility = "FRIEND AHEAD ATTACKS: Deal 1 attack to them, +3 hp"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -232)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("2_wkicp")

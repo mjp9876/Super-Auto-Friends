@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://csxqo3h0u0j0t"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_rqfnb"]
+[ext_resource type="Texture2D" uid="uid://dsb05ka3vph53" path="res://assets/friends/Florence Pugh.png" id="2_fbnon"]
+[ext_resource type="Script" path="res://scripts/friends/florence_pugh.gd" id="2_h2j2t"]
+
+[node name="Florence Pugh" instance=ExtResource("1_rqfnb")]
+script = ExtResource("2_h2j2t")
+card_name = "Florence Pugh"
+cost = 5
+hp = 20
+attack = 2
+x = 3
+colour = 3
+ability = "END TURN: Won last battle: Give friend at the front +10 hp"
+upgradedAbility = "END TURN: Won last battle: Give friend at the front +25 hp"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_fbnon")

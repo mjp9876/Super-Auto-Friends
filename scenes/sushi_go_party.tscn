@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp66vmuai3kxt"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_bugas"]
+[ext_resource type="Texture2D" uid="uid://c21nxfdw848cs" path="res://assets/items/Sushi Go Party.png" id="2_ikmlg"]
+[ext_resource type="Script" path="res://scripts/items/sushi_go_party.gd" id="2_nj4ak"]
+
+[node name="Sushi Go Party" instance=ExtResource("1_bugas")]
+script = ExtResource("2_nj4ak")
+card_name = "Sushi Go Party"
+cost = 15
+colour = 4
+ability = "+1 X"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -238)
+scale = Vector2(0.39, 0.39)
+texture = ExtResource("2_ikmlg")
+
+[node name="item_stats_box" parent="." index="4"]
+visible = true
+
+[node name="hp" parent="." index="6"]
+visible = false
+
+[node name="text" parent="." index="7"]
+visible = false
+
+[node name="item_text" parent="." index="8"]
+visible = true
+
+[node name="cost" parent="item_text" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 121.0
+offset_bottom = 125.0
+
+[node name="name" parent="item_text" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 420.0
+offset_bottom = 75.0
+
+[node name="ability" parent="item_text" index="2"]
+offset_left = 0.0
+offset_right = 420.0

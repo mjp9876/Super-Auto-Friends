@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj7np5myjwdc2"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_brycn"]
+[ext_resource type="Texture2D" uid="uid://uat3k6ygjkgt" path="res://assets/friends/Neil Breen.png" id="2_x3wv8"]
+[ext_resource type="Script" path="res://scripts/friends/neil_breen.gd" id="2_ydp3q"]
+
+[node name="Neil Breen" instance=ExtResource("1_brycn")]
+script = ExtResource("2_ydp3q")
+card_name = "Neil Breen"
+cost = 3
+hp = 21
+attack = 2
+x = 3
+target = 1
+colour = 2
+ability = "reroll_icon : Make two random friends in the shop green"
+upgradedAbility = "reroll_icon : Make three random friends in the shop green"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -236)
+scale = Vector2(0.51, 0.51)
+texture = ExtResource("2_x3wv8")

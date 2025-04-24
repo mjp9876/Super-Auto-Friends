@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvg6ug3lji1f0"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_coxia"]
+[ext_resource type="Texture2D" uid="uid://33n4ooa0wit2" path="res://assets/friends/Acapella.png" id="2_myd3f"]
+[ext_resource type="Script" path="res://scripts/friends/acapella.gd" id="2_pqvfs"]
+
+[node name="Acapella" instance=ExtResource("1_coxia")]
+script = ExtResource("2_pqvfs")
+card_name = "Acapella"
+cost = 3
+hp = 14
+attack = 3
+x = 2
+target = 2
+colour = 2
+ability = "FRIEND USES ITEM: Give them +1 X until the start of next turn"
+upgradedAbility = "FRIEND USES ITEM: Give them +2 X until the start of next turn"
+catagory = 8
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -237)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_myd3f")

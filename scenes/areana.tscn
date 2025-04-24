@@ -1,0 +1,246 @@
+[gd_scene load_steps=5 format=3 uid="uid://c32somer5o5f6"]
+
+[ext_resource type="Script" path="res://scripts/areana.gd" id="1_aog3x"]
+[ext_resource type="Texture2D" uid="uid://6gbk5jobnubm" path="res://assets/card_icons/arena_background.png" id="1_r3j10"]
+[ext_resource type="Texture2D" uid="uid://dvtf233ndtnfe" path="res://assets/card_icons/win_icon.png" id="3_k4k1d"]
+[ext_resource type="Texture2D" uid="uid://djrm5ucjygbsf" path="res://assets/card_icons/cost_icon.png" id="5_7uxd6"]
+
+[node name="Areana" type="Node2D" groups=["arena"]]
+script = ExtResource("1_aog3x")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.2, 0.2)
+
+[node name="background" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(5, 5)
+texture = ExtResource("1_r3j10")
+
+[node name="winsP1" type="Sprite2D" parent="."]
+position = Vector2(-2850, -1500)
+texture = ExtResource("3_k4k1d")
+
+[node name="winsP2" type="Sprite2D" parent="."]
+position = Vector2(2850, -1500)
+texture = ExtResource("3_k4k1d")
+
+[node name="winsP3" type="Sprite2D" parent="."]
+position = Vector2(-2850, 1500)
+texture = ExtResource("3_k4k1d")
+
+[node name="winsP4" type="Sprite2D" parent="."]
+position = Vector2(2850, 1500)
+texture = ExtResource("3_k4k1d")
+
+[node name="moneyP1" type="Sprite2D" parent="."]
+position = Vector2(-2850, -1100)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_7uxd6")
+
+[node name="moneyP2" type="Sprite2D" parent="."]
+position = Vector2(2850, -1100)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_7uxd6")
+
+[node name="moneyP3" type="Sprite2D" parent="."]
+position = Vector2(-2850, 1100)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_7uxd6")
+
+[node name="moneyP4" type="Sprite2D" parent="."]
+position = Vector2(2850, 1100)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("5_7uxd6")
+
+[node name="player1cards" type="Node2D" parent="."]
+
+[node name="activeSpot" type="Node2D" parent="player1cards"]
+position = Vector2(-650, -900)
+
+[node name="spot2" type="Node2D" parent="player1cards"]
+position = Vector2(-1600, -1300)
+
+[node name="spot3" type="Node2D" parent="player1cards"]
+position = Vector2(-1600, -500)
+
+[node name="spot4" type="Node2D" parent="player1cards"]
+position = Vector2(-2225, -1300)
+
+[node name="spot5" type="Node2D" parent="player1cards"]
+position = Vector2(-2225, -500)
+
+[node name="spot6" type="Node2D" parent="player1cards"]
+position = Vector2(-2850, -500)
+
+[node name="player2cards" type="Node2D" parent="."]
+
+[node name="activeSpot" type="Node2D" parent="player2cards"]
+position = Vector2(650, -900)
+
+[node name="spot2" type="Node2D" parent="player2cards"]
+position = Vector2(1600, -1300)
+
+[node name="spot3" type="Node2D" parent="player2cards"]
+position = Vector2(1600, -500)
+
+[node name="spot4" type="Node2D" parent="player2cards"]
+position = Vector2(2225, -1300)
+
+[node name="spot5" type="Node2D" parent="player2cards"]
+position = Vector2(2225, -500)
+
+[node name="spot6" type="Node2D" parent="player2cards"]
+position = Vector2(2850, -500)
+
+[node name="player3cards" type="Node2D" parent="."]
+
+[node name="activeSpot" type="Node2D" parent="player3cards"]
+position = Vector2(-650, 900)
+
+[node name="spot2" type="Node2D" parent="player3cards"]
+position = Vector2(-1600, 500)
+
+[node name="spot3" type="Node2D" parent="player3cards"]
+position = Vector2(-1600, 1300)
+
+[node name="spot4" type="Node2D" parent="player3cards"]
+position = Vector2(-2225, 500)
+
+[node name="spot5" type="Node2D" parent="player3cards"]
+position = Vector2(-2225, 1300)
+
+[node name="spot6" type="Node2D" parent="player3cards"]
+position = Vector2(-2850, 500)
+
+[node name="player4cards" type="Node2D" parent="."]
+
+[node name="activeSpot" type="Node2D" parent="player4cards"]
+position = Vector2(650, 900)
+
+[node name="spot2" type="Node2D" parent="player4cards"]
+position = Vector2(1600, 500)
+
+[node name="spot3" type="Node2D" parent="player4cards"]
+position = Vector2(1600, 1300)
+
+[node name="spot4" type="Node2D" parent="player4cards"]
+position = Vector2(2225, 500)
+
+[node name="spot5" type="Node2D" parent="player4cards"]
+position = Vector2(2225, 1300)
+
+[node name="spot6" type="Node2D" parent="player4cards"]
+position = Vector2(2850, 500)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="winsP1" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = -3050.0
+offset_top = -1700.0
+offset_right = -2650.0
+offset_bottom = -1300.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "0"
+horizontal_alignment = 1
+
+[node name="winsP2" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 2650.0
+offset_top = -1700.0
+offset_right = 3050.0
+offset_bottom = -1300.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "0"
+horizontal_alignment = 1
+
+[node name="winsP3" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = -3050.0
+offset_top = 1300.0
+offset_right = -2650.0
+offset_bottom = 1700.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "0"
+horizontal_alignment = 1
+
+[node name="winsP4" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 2650.0
+offset_top = 1300.0
+offset_right = 3050.0
+offset_bottom = 1700.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "0"
+horizontal_alignment = 1
+
+[node name="moneyP1" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = -3050.0
+offset_top = -1300.0
+offset_right = -2650.0
+offset_bottom = -900.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="moneyP2" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 2650.0
+offset_top = -1300.0
+offset_right = 3050.0
+offset_bottom = -900.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="moneyP3" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = -3050.0
+offset_top = 900.0
+offset_right = -2650.0
+offset_bottom = 1300.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="moneyP4" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 2650.0
+offset_top = 900.0
+offset_right = 3050.0
+offset_bottom = 1300.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="startFighting" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="betweenHits" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[node name="betweenAttackRounds" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="startFighting" to="." method="_on_start_fighting_timeout"]
+[connection signal="timeout" from="betweenHits" to="." method="_on_between_hits_timeout"]
+[connection signal="timeout" from="betweenAttackRounds" to="." method="_on_between_attack_rounds_timeout"]

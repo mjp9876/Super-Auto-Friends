@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://4igix4evv3ob"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_dodtp"]
+[ext_resource type="Texture2D" uid="uid://dgyv538wx5o6j" path="res://assets/friends/Esme.png" id="2_wg2ad"]
+
+[node name="Esme" instance=ExtResource("1_dodtp")]
+card_name = "Esme"
+cost = 14
+hp = 49
+attack = 2
+x = 3
+target = 1
+colour = 3
+ability = "Items give 100% more hp , attack , and X"
+upgradedAbility = "Items give 150% more hp , attack , and X (Rounded down)"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("2_wg2ad")

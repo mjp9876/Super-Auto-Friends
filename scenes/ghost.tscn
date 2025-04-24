@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cldmg72xgb7it"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_mpb4e"]
+[ext_resource type="Script" path="res://scripts/ghost.gd" id="2_rjf3n"]
+
+[node name="ghost" instance=ExtResource("1_mpb4e")]
+visible = false
+script = ExtResource("2_rjf3n")
+card_name = "ghost"

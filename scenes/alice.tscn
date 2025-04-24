@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://vdup561sp3t6"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_yvowu"]
+[ext_resource type="Script" path="res://scripts/friends/alice.gd" id="2_6g01u"]
+[ext_resource type="Texture2D" uid="uid://cmgim7ok7m51k" path="res://assets/friends/Alice.png" id="2_c4xhk"]
+
+[node name="Alice" instance=ExtResource("1_yvowu")]
+script = ExtResource("2_6g01u")
+card_name = "Alice"
+cost = 9
+hp = 28
+attack = 4
+x = 3
+ability = "KILL: Make the killed card red 
+DIE: Deal 10 attack to all opponent red cards"
+upgradedAbility = "KILL: Make the killed card red 
+DIE: Deal 20 attack to all opponent red cards"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("2_c4xhk")

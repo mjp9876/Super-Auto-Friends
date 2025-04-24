@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dt0aqj5520q8d"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_lmox5"]
+[ext_resource type="Script" path="res://scripts/friends/the_butler.gd" id="2_mvw6e"]
+[ext_resource type="Texture2D" uid="uid://dp3cj14qlfib" path="res://assets/friends/The Butler.png" id="2_woa14"]
+
+[node name="The Butler" instance=ExtResource("1_lmox5")]
+script = ExtResource("2_mvw6e")
+card_name = "The Butler"
+cost = 3
+hp = 18
+attack = 2
+x = 3
+colour = 2
+ability = "END TURN: Give one random friend +4 hp 
+BUY RED CARD: -10 hp"
+upgradedAbility = "END TURN: Give one random friend +6 hp 
+BUY RED CARD: -3 hp"
+catagory = 12
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("2_woa14")

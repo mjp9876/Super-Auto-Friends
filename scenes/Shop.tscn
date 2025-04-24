@@ -1,0 +1,311 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7kt5dcyh1sk5"]
+
+[ext_resource type="Texture2D" uid="uid://dvtf233ndtnfe" path="res://assets/card_icons/win_icon.png" id="1_mkyxl"]
+[ext_resource type="Texture2D" uid="uid://djrm5ucjygbsf" path="res://assets/card_icons/cost_icon.png" id="2_8xpea"]
+[ext_resource type="Texture2D" uid="uid://cdd0oi0ncwria" path="res://assets/card_icons/card_slot_icon.png" id="3_jhkum"]
+[ext_resource type="Texture2D" uid="uid://ceee1pg4oog1n" path="res://assets/card_icons/reroll_icon.png" id="4_la7g4"]
+[ext_resource type="Texture2D" uid="uid://u83i2hqbif7b" path="res://assets/card_icons/sell_icon.png" id="5_j4j8l"]
+[ext_resource type="Texture2D" uid="uid://m78inj2nm1gs" path="res://assets/card_icons/ready_icon.png" id="6_ehceu"]
+
+[sub_resource type="Theme" id="Theme_wrl1u"]
+default_font_size = 64
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_wrl1u")
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="winsLeaderMoney" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="winsIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/winsLeaderMoney"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("1_mkyxl")
+expand_mode = 1
+
+[node name="wins" type="Label" parent="MarginContainer/VBoxContainer/winsLeaderMoney"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "0
+"
+
+[node name="moneyIcon" type="TextureRect" parent="MarginContainer/VBoxContainer/winsLeaderMoney"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("2_8xpea")
+expand_mode = 1
+
+[node name="money" type="Label" parent="MarginContainer/VBoxContainer/winsLeaderMoney/moneyIcon"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -44.0
+offset_right = 20.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "10"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 200
+
+[node name="team" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="leaderSlot" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/team"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="leader" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/team/leaderSlot"]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 200.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="friend1Slot" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/team"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="friend1" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/team/friend1Slot"]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 200.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="friend2Slot" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/team"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="friend2" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/team/friend2Slot"]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 200.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="friend3Slot" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/team"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="friend3" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/team/friend3Slot"]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 200.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="friend4Slot" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/team"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="friend4" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/team/friend4Slot"]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 200.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="friend5Slot" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer/team"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="friend5" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer/team/friend5Slot"]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 200.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 160
+
+[node name="shop" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="shopSlot1" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer2/shop"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="friend" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer2/shop/shopSlot1"]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 1
+offset_right = 120.0
+offset_bottom = 160.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="shopSlot2" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer2/shop"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="friend" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer2/shop/shopSlot2"]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 1
+offset_right = 120.0
+offset_bottom = 160.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="shopSlot3" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer2/shop"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="friend" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer2/shop/shopSlot3"]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 1
+offset_right = 120.0
+offset_bottom = 160.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="shopSlot4" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer2/shop"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="friend" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer2/shop/shopSlot4"]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 1
+offset_right = 120.0
+offset_bottom = 160.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="shopSlot5" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer2/shop"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="friend" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer2/shop/shopSlot5"]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 1
+offset_right = 120.0
+offset_bottom = 160.0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="shopSlot6" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer2/shop"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="item" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer2/shop/shopSlot6"]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_bottom = 160.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="shopSlot7" type="Control" parent="MarginContainer/VBoxContainer/MarginContainer2/shop"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="item" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer2/shop/shopSlot7"]
+custom_minimum_size = Vector2(120, 160)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_bottom = 160.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+texture = ExtResource("3_jhkum")
+expand_mode = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="buttons" type="HBoxContainer" parent="MarginContainer/VBoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="reroll" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer3/buttons"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("4_la7g4")
+expand_icon = true
+
+[node name="sell" type="TextureRect" parent="MarginContainer/VBoxContainer/MarginContainer3/buttons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+texture = ExtResource("5_j4j8l")
+expand_mode = 1
+
+[node name="ready" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer3/buttons"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+icon = ExtResource("6_ehceu")
+icon_alignment = 2
+expand_icon = true

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8uuwmgvsfpwp"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_337ib"]
+[ext_resource type="Script" path="res://scripts/friends/hobbes.gd" id="2_gcs5e"]
+[ext_resource type="Texture2D" uid="uid://bh0664nl57lf7" path="res://assets/friends/Hobbes.png" id="2_ynwhm"]
+
+[node name="Hobbes" instance=ExtResource("1_337ib")]
+script = ExtResource("2_gcs5e")
+card_name = "Hobbes"
+cost = 9
+hp = 17
+attack = 8
+x = 2
+target = 3
+colour = 1
+ability = "START TURN: Discount all items in the shop by 4 coin"
+upgradedAbility = "START TURN: Discount all items in the shop by 7 coin"
+catagory = 13
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_ynwhm")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckd0xexqoihiy"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_u0b7m"]
+[ext_resource type="Script" path="res://scripts/friends/jazz.gd" id="2_re51o"]
+[ext_resource type="Texture2D" uid="uid://buloglst30pyy" path="res://assets/friends/Jazz.png" id="3_6avuo"]
+
+[node name="Jas" instance=ExtResource("1_u0b7m")]
+script = ExtResource("2_re51o")
+card_name = "Jas"
+cost = 9
+hp = 34
+attack = 3
+x = 3
+target = 2
+colour = 2
+ability = "START BATTLE: +2 attack for each opponent green card
+KILL: Make the killed card green"
+upgradedAbility = "START BATTLE: +4 attack for each opponent green card
+KILL: Make the killed card green"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("3_6avuo")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

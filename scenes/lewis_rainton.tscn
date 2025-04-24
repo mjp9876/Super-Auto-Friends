@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm3shmow0edba"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_k6q5n"]
+[ext_resource type="Texture2D" uid="uid://s3jb0t736p14" path="res://assets/friends/Lewis Rainton.png" id="2_k018w"]
+[ext_resource type="Script" path="res://scripts/friends/lewis_rainton.gd" id="2_vxtdg"]
+
+[node name="Lewis Rainton" instance=ExtResource("1_k6q5n")]
+script = ExtResource("2_vxtdg")
+card_name = "Lewis Rainton"
+cost = 3
+hp = 16
+attack = 4
+x = 1
+target = 3
+colour = 1
+ability = "BEFORE ATTACK: Deal 4 attack to the active opponent with the least hp"
+upgradedAbility = "BEFORE ATTACK: Deal 4 attack to the active opponent with the least hp twice"
+catagory = 12
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("2_k018w")

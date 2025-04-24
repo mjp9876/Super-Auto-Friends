@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl3kr3340e4xv"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_qyqlf"]
+[ext_resource type="Script" path="res://scripts/friends/molly.gd" id="2_rdqcs"]
+[ext_resource type="Texture2D" uid="uid://btui4yp7lsdt1" path="res://assets/friends/Molly.png" id="2_x850k"]
+
+[node name="Molly" instance=ExtResource("1_qyqlf")]
+script = ExtResource("2_rdqcs")
+card_name = "Molly"
+cost = 6
+hp = 23
+attack = 2
+x = 2
+target = 1
+colour = 2
+ability = "START BATTLE: Deal 14 attack to a random opponent back card three times"
+upgradedAbility = "START BATTLE: Deal 17 attack to a random opponent back card four times"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("2_x850k")

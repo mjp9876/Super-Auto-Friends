@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5n3q0dlcjqrc"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_tm312"]
+[ext_resource type="Script" path="res://scripts/friends/annie.gd" id="2_1buni"]
+[ext_resource type="Texture2D" uid="uid://2xr7xsuxpy1y" path="res://assets/friends/Annie.png" id="2_pujqk"]
+
+[node name="Annie" instance=ExtResource("1_tm312")]
+script = ExtResource("2_1buni")
+card_name = "Annie"
+cost = 9
+hp = 20
+attack = 5
+x = 2
+target = 9
+colour = 3
+ability = "START BATTLE: Give friend ahead +6 attack"
+upgradedAbility = "START BATTLE: Give friend ahead +6 attack +2 X"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(0.41, 0.41)
+texture = ExtResource("2_pujqk")

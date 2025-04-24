@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6lschnwxpnxu"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_tv0pa"]
+[ext_resource type="Script" path="res://scripts/friends/werewolf.gd" id="2_026cw"]
+[ext_resource type="Texture2D" uid="uid://6do5jfvv3xqf" path="res://assets/friends/Werewolf.png" id="2_xaoy0"]
+
+[node name="Werewolf" instance=ExtResource("1_tv0pa")]
+script = ExtResource("2_026cw")
+card_name = "Werewolf"
+cost = 12
+hp = 44
+attack = 6
+x = 2
+target = 2
+colour = 2
+ability = "HURT: Remove the ability of the card that hurt this"
+upgradedAbility = "HURT: Remove the ability of the card that hurt this
+DIE: Remove the ability of five random opponent cards"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -232)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_xaoy0")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

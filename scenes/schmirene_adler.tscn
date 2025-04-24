@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbdi62pu60jj7"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_a0pcc"]
+[ext_resource type="Texture2D" uid="uid://b7wmwp85nvtru" path="res://assets/friends/Schmirene Adler.png" id="2_rlf3y"]
+[ext_resource type="Script" path="res://scripts/friends/schmirene_adler.gd" id="2_rqjsu"]
+
+[node name="Schmirene Adler" instance=ExtResource("1_a0pcc")]
+script = ExtResource("2_rqjsu")
+card_name = "Schmirene Adler"
+cost = 5
+hp = 21
+attack = 1
+x = 3
+ability = "START BATTLE: Didn't win last battle: +4 attack"
+upgradedAbility = "START BATTLE: Didn't win last battle: +8 attack"
+catagory = 12
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -237)
+scale = Vector2(0.64, 0.64)
+texture = ExtResource("2_rlf3y")

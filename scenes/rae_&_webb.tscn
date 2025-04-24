@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2jvq16nrpjvo"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_w60vc"]
+[ext_resource type="Script" path="res://scripts/friends/rae_&_webb.gd" id="2_533c6"]
+[ext_resource type="Texture2D" uid="uid://dx45pg5x1s36f" path="res://assets/friends/Rae & Webb.png" id="2_jb5iy"]
+
+[node name="Rae & Webb" instance=ExtResource("1_w60vc")]
+script = ExtResource("2_533c6")
+card_name = "Rae & Webb"
+cost = 6
+hp = 22
+attack = 3
+x = 3
+colour = 1
+ability = "END TURN: Give all current and future friends in the shop +2 hp for each food and drink in your team"
+upgradedAbility = "END TURN: Give all current and future friends in the shop +4 hp for each food and drink in your team"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -232)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_jb5iy")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhumoca4vj2wx"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_4uaia"]
+[ext_resource type="Script" path="res://scripts/friends/godfather.gd" id="2_7e4fp"]
+[ext_resource type="Texture2D" uid="uid://q1b24lgsst8r" path="res://assets/friends/Godfather.png" id="2_ypj08"]
+
+[node name="Godfather" instance=ExtResource("1_4uaia")]
+script = ExtResource("2_7e4fp")
+card_name = "Godfather"
+cost = 8
+hp = 34
+attack = 4
+x = 1
+target = 1
+ability = "START BATTLE: +1 X for each other red friend in your team"
+upgradedAbility = "END TURN: Make the friend ahead red 
+START BATTLE: +1 X for each red friend in your team"
+catagory = 2
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ypj08")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

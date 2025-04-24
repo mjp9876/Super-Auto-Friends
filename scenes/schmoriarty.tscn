@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://8tbhodx6xcvr"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_0tx2k"]
+[ext_resource type="Script" path="res://scripts/friends/schmoriarty.gd" id="2_efbfn"]
+[ext_resource type="Texture2D" uid="uid://db318v52ma8un" path="res://assets/friends/Schmoriarty.png" id="2_w45i2"]
+
+[node name="Schmoriarty" instance=ExtResource("1_0tx2k")]
+script = ExtResource("2_efbfn")
+card_name = "Schmoriarty"
+cost = 13
+hp = 54
+attack = 4
+x = 4
+target = 1
+ability = "KILL TWICE: Deal 24 attack to other opponents' front card"
+upgradedAbility = "KILL TWICE: Deal 44 attack to other opponents' front card"
+catagory = 12
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -228)
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("2_w45i2")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dstj4berqfxr2"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_wt4c0"]
+[ext_resource type="Texture2D" uid="uid://dw7fwqt807tcm" path="res://assets/friends/EU4.png" id="2_qqr6p"]
+[ext_resource type="Script" path="res://scripts/friends/eu_4.gd" id="2_uvgrp"]
+
+[node name="EU4" instance=ExtResource("1_wt4c0")]
+script = ExtResource("2_uvgrp")
+card_name = "EU4"
+cost = 5
+hp = 14
+attack = 3
+x = 2
+target = 6
+colour = 3
+ability = "KILL: +2 coin +8 hp"
+upgradedAbility = "KILL: +3 coin +12 hp +1 attack"
+catagory = 4
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -238)
+scale = Vector2(0.185, 0.185)
+texture = ExtResource("2_qqr6p")

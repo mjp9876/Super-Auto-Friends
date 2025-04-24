@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfo0asv6j4lo1"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_obpoj"]
+[ext_resource type="Texture2D" uid="uid://n3wmrs0ykhqs" path="res://assets/friends/Minecraft.png" id="2_1fyvg"]
+[ext_resource type="Script" path="res://scripts/friends/minecraft.gd" id="2_p02nd"]
+
+[node name="Minecraft" instance=ExtResource("1_obpoj")]
+script = ExtResource("2_p02nd")
+card_name = "Minecraft"
+cost = 8
+hp = 32
+attack = 4
+x = 2
+target = 4
+colour = 2
+ability = "START TURN: Didn't win last battle: Give current and future friends in the shop +4 hp +1 attack"
+upgradedAbility = "START TURN: Give current and future friends in the shop +4 hp +1 attack"
+catagory = 4
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.46, 0.46)
+texture = ExtResource("2_1fyvg")

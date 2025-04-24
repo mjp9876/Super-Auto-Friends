@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkg45efcc6kf5"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_cnvlm"]
+[ext_resource type="Script" path="res://scripts/friends/charterstone.gd" id="2_dcjpv"]
+[ext_resource type="Texture2D" uid="uid://ya1tqvom645" path="res://assets/friends/Charterstone.png" id="2_ej1nj"]
+
+[node name="Charterstone" instance=ExtResource("1_cnvlm")]
+script = ExtResource("2_dcjpv")
+card_name = "Charterstone"
+cost = 5
+hp = 14
+attack = 4
+x = 2
+target = 1
+colour = 3
+ability = "KILL: Get 1 random: (+2 coin , +6 hp , +10 hp , +1 attack , +2 attack , +1 X )"
+upgradedAbility = "BEFORE ATTACK: Get 1 random: (+2 coin , +6 hp , +10 hp , +1 attack , +2 attack , +1 X )"
+catagory = 1
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -238)
+scale = Vector2(0.38, 0.38)
+texture = ExtResource("2_ej1nj")

@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://yk3ptj3im4cf"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_3aupw"]
+[ext_resource type="Script" path="res://scripts/items/alton_towers.gd" id="2_q87lk"]
+[ext_resource type="Texture2D" uid="uid://cnjpe4rqat81m" path="res://assets/items/Alton Towers.png" id="2_x8vf3"]
+
+[node name="Alton Towers" instance=ExtResource("1_3aupw")]
+script = ExtResource("2_q87lk")
+card_name = "Alton Towers"
+cost = 4
+colour = 4
+ability = "+3 X until the start of next turn"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -238)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_x8vf3")
+
+[node name="item_stats_box" parent="." index="4"]
+visible = true
+
+[node name="hp" parent="." index="6"]
+visible = false
+
+[node name="text" parent="." index="7"]
+visible = false
+
+[node name="item_text" parent="." index="8"]
+visible = true
+
+[node name="cost" parent="item_text" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 121.0
+offset_bottom = 125.0
+
+[node name="name" parent="item_text" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 420.0
+offset_bottom = 75.0
+
+[node name="ability" parent="item_text" index="2"]
+offset_left = 0.0
+offset_right = 420.0

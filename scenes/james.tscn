@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmlnbeegax47d"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_epjjr"]
+[ext_resource type="Texture2D" uid="uid://bubhjolgpkxup" path="res://assets/friends/James.png" id="2_3p2bv"]
+[ext_resource type="Script" path="res://scripts/friends/james.gd" id="2_coeb5"]
+
+[node name="James" instance=ExtResource("1_epjjr")]
+script = ExtResource("2_coeb5")
+card_name = "James"
+hp = 30
+attack = 4
+x = 2
+target = 2
+colour = 2
+ability = "KILL: +2 attack"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -232)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("2_3p2bv")
+
+[node name="cost" parent="." index="5"]
+visible = false
+
+[node name="cost" parent="text" index="0"]
+visible = false

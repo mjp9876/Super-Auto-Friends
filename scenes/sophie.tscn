@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxq4v3by47sms"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_280fe"]
+[ext_resource type="Script" path="res://scripts/friends/sophie.gd" id="2_08tgd"]
+[ext_resource type="Texture2D" uid="uid://da7pq1swjw326" path="res://assets/friends/Sophie.png" id="2_inweh"]
+
+[node name="Sophie" instance=ExtResource("1_280fe")]
+script = ExtResource("2_08tgd")
+card_name = "Sophie"
+cost = 8
+hp = 20
+attack = 2
+x = 4
+target = 5
+colour = 1
+ability = "END TURN: Give 2 other random friends +5 hp"
+upgradedAbility = "END TURN: Give 3 other random friends +6 hp"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -231)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("2_inweh")

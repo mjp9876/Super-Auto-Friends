@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck6ld324b5qgu"]
+
+[ext_resource type="Texture2D" uid="uid://l324mx35p05q" path="res://icon.svg" id="1_by2ps"]
+[ext_resource type="Script" path="res://scripts/moveSymbol.gd" id="1_tyks8"]
+
+[sub_resource type="Curve2D" id="Curve2D_kv437"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -350, 2.08165e-12, -300, 2.08165e-12, 300, 2.08165e-12, 2.08165e-12, -500, 0, 0, 0, 0, 350, 2.08165e-12)
+}
+point_count = 3
+
+[node name="MoveSymbol" type="Node2D"]
+script = ExtResource("1_tyks8")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_kv437")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-350, 2.08165e-12)
+rotation = -1.07243
+rotates = false
+loop = false
+
+[node name="symbol" type="Sprite2D" parent="Path2D/PathFollow2D"]
+visible = false
+z_index = 20
+rotation = 1.07111
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_by2ps")
+
+[node name="Control" type="Control" parent="Path2D/PathFollow2D/symbol"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Path2D/PathFollow2D/symbol/Control"]
+layout_mode = 0
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 1
+vertical_alignment = 1

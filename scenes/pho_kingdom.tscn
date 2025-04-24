@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1f63jv17ddc0"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_dksd7"]
+[ext_resource type="Texture2D" uid="uid://bckwih83leq08" path="res://assets/friends/Pho Kingdom.png" id="2_ns3mq"]
+[ext_resource type="Script" path="res://scripts/friends/pho_kingdom.gd" id="2_o2p75"]
+
+[node name="Pho kingdom" instance=ExtResource("1_dksd7")]
+script = ExtResource("2_o2p75")
+card_name = "Pho Kingdom"
+cost = 5
+hp = 40
+attack = 1
+x = 2
+target = 2
+colour = 2
+ability = "START BATTLE: +n attack (n = Highest number of wins_icon - your number of wins_icon )"
+upgradedAbility = "START BATTLE: +n attack (n = 10 - your number of wins_icon )"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -238)
+scale = Vector2(0.225, 0.225)
+texture = ExtResource("2_ns3mq")

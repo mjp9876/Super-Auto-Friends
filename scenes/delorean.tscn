@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxr0pnio5s84v"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_h7m37"]
+[ext_resource type="Script" path="res://scripts/items/delorean.gd" id="2_l2pa3"]
+[ext_resource type="Texture2D" uid="uid://cgjiorbcmieou" path="res://assets/items/Delorean.png" id="3_fpht3"]
+
+[node name="Delorean" instance=ExtResource("1_h7m37")]
+script = ExtResource("2_l2pa3")
+card_name = "Delorean"
+cost = 4
+colour = 4
+ability = "Activate START TURN/END TURN ability"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_fpht3")
+
+[node name="item_stats_box" parent="." index="4"]
+visible = true
+
+[node name="hp" parent="." index="6"]
+visible = false
+
+[node name="text" parent="." index="7"]
+visible = false
+
+[node name="item_text" parent="." index="8"]
+visible = true

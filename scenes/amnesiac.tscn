@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://be4h7ocx3ngih"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_yokeb"]
+[ext_resource type="Texture2D" uid="uid://cbxrtlk8ubts5" path="res://assets/friends/Amnesiac.png" id="2_aeji8"]
+[ext_resource type="Script" path="res://scripts/friends/amnesiac.gd" id="2_ewgyn"]
+
+[node name="Amnesiac" instance=ExtResource("1_yokeb")]
+script = ExtResource("2_ewgyn")
+card_name = "Amnesiac"
+cost = 8
+hp = 12
+attack = 1
+x = 2
+target = 1
+colour = 3
+ability = "START BATTLE: Set attack equal to the friend in your team with the most attack"
+upgradedAbility = "START BATTLE: Set attack equal to the friend in your team with the most attack
+FRIEND DIES: +2 attack"
+catagory = 2
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -233)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_aeji8")

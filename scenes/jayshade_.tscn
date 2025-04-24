@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw8efdfxvh2p0"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_yr154"]
+[ext_resource type="Script" path="res://scripts/friends/jayshade_.gd" id="2_ku1u7"]
+[ext_resource type="Texture2D" uid="uid://d1pa2fu16k20q" path="res://assets/friends/Jayshade_.png" id="2_t7nlp"]
+
+[node name="Jayshade_" instance=ExtResource("1_yr154")]
+script = ExtResource("2_ku1u7")
+card_name = "Jayshade_"
+cost = 6
+hp = 12
+attack = 2
+x = 2
+target = 3
+colour = 1
+ability = "USE ITEM: +2 hp +2 coin"
+upgradedAbility = "USE ITEM: +2 hp +2 attack +2 coin"
+catagory = 7
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("2_t7nlp")

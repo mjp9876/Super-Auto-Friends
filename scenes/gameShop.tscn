@@ -1,0 +1,254 @@
+[gd_scene load_steps=16 format=3 uid="uid://dpkrdb87nol5p"]
+
+[ext_resource type="Script" path="res://scripts/gameShop.gd" id="1_bbge1"]
+[ext_resource type="Texture2D" uid="uid://ijnwxay3h2o7" path="res://assets/shopBackground.png" id="1_ea50w"]
+[ext_resource type="Texture2D" uid="uid://dvtf233ndtnfe" path="res://assets/card_icons/win_icon.png" id="2_5a1la"]
+[ext_resource type="PackedScene" uid="uid://c32somer5o5f6" path="res://scenes/areana.tscn" id="2_5nqu7"]
+[ext_resource type="Texture2D" uid="uid://djrm5ucjygbsf" path="res://assets/card_icons/cost_icon.png" id="3_fxjf5"]
+[ext_resource type="Texture2D" uid="uid://ceee1pg4oog1n" path="res://assets/card_icons/reroll_icon.png" id="4_pblp7"]
+[ext_resource type="Texture2D" uid="uid://m78inj2nm1gs" path="res://assets/card_icons/ready_icon.png" id="5_7srba"]
+[ext_resource type="PackedScene" uid="uid://yfob4ipbm8es" path="res://scenes/cardDropZone.tscn" id="6_3380w"]
+[ext_resource type="Texture2D" uid="uid://bb3mg2r88j6jc" path="res://assets/card_icons/lock_icon.png" id="7_b61c0"]
+[ext_resource type="Texture2D" uid="uid://u83i2hqbif7b" path="res://assets/card_icons/sell_icon.png" id="8_6t2bt"]
+[ext_resource type="Texture2D" uid="uid://ba1mrfy0qoinh" path="res://assets/card_icons/upgrade_icon.png" id="8_vikvg"]
+[ext_resource type="Texture2D" uid="uid://bfbawteqoowww" path="res://assets/card_icons/card_stand_icon.png" id="9_4rvvs"]
+[ext_resource type="Texture2D" uid="uid://d2dh17fcic0rd" path="res://assets/card_icons/upgradeBackground.png" id="12_wjank"]
+[ext_resource type="Texture2D" uid="uid://cn57cfym2k2wc" path="res://assets/card_icons/yes_box_icon.png" id="13_fx2bg"]
+[ext_resource type="Texture2D" uid="uid://bj32mkqil7ba3" path="res://assets/card_icons/no_box_icon.png" id="14_qjk3q"]
+
+[node name="GameShop" type="Node2D" groups=["shop"]]
+script = ExtResource("1_bbge1")
+arena = ExtResource("2_5nqu7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.2, 0.2)
+
+[node name="background" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_ea50w")
+
+[node name="wins_icon" type="Sprite2D" parent="."]
+position = Vector2(-2900, -1500)
+texture = ExtResource("2_5a1la")
+
+[node name="money_icon" type="Sprite2D" parent="."]
+position = Vector2(2900, -1500)
+texture = ExtResource("3_fxjf5")
+
+[node name="sell" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(1100, 1500)
+texture = ExtResource("8_6t2bt")
+type = 4
+
+[node name="lock" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(-1200, 1500)
+texture = ExtResource("7_b61c0")
+type = 3
+
+[node name="upgrade" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(2.08165e-12, 1500)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("8_vikvg")
+type = 5
+
+[node name="reroll_cost_icon" type="Sprite2D" parent="."]
+position = Vector2(-2675, 1475)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_fxjf5")
+
+[node name="shopSlot1" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(-2600, 700)
+texture = ExtResource("9_4rvvs")
+offset = Vector2(2.08165e-12, 400)
+type = 1
+
+[node name="shopSlot2" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(-1750, 700)
+texture = ExtResource("9_4rvvs")
+offset = Vector2(2.08165e-12, 400)
+slotNum = 1
+type = 1
+
+[node name="shopSlot3" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(-900, 700)
+texture = ExtResource("9_4rvvs")
+offset = Vector2(2.08165e-12, 400)
+slotNum = 2
+type = 1
+
+[node name="shopSlot4" parent="." instance=ExtResource("6_3380w")]
+visible = false
+position = Vector2(-50, 700)
+texture = ExtResource("9_4rvvs")
+offset = Vector2(2.08165e-12, 400)
+slotNum = 3
+type = 1
+active = false
+
+[node name="shopSlot5" parent="." instance=ExtResource("6_3380w")]
+visible = false
+position = Vector2(800, 700)
+texture = ExtResource("9_4rvvs")
+offset = Vector2(2.08165e-12, 400)
+slotNum = 4
+type = 1
+active = false
+
+[node name="itemSlot1" parent="." instance=ExtResource("6_3380w")]
+visible = false
+position = Vector2(1750, 700)
+texture = ExtResource("9_4rvvs")
+offset = Vector2(2.08165e-12, 400)
+type = 2
+active = false
+
+[node name="itemSlot2" parent="." instance=ExtResource("6_3380w")]
+visible = false
+position = Vector2(2600, 700)
+texture = ExtResource("9_4rvvs")
+offset = Vector2(2.08165e-12, 400)
+slotNum = 1
+type = 2
+active = false
+
+[node name="leaderSlot" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(-2550, -700)
+
+[node name="friendSlot1" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(-1450, -700)
+slotNum = 1
+
+[node name="friendSlot2" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(-450, -700)
+slotNum = 2
+
+[node name="friendSlot3" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(550, -700)
+slotNum = 3
+
+[node name="friendSlot4" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(1550, -700)
+slotNum = 4
+
+[node name="friendSlot5" parent="." instance=ExtResource("6_3380w")]
+position = Vector2(2550, -700)
+slotNum = 5
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="reroll" type="Button" parent="GUI"]
+layout_mode = 0
+offset_left = -2500.0
+offset_top = 1300.0
+offset_right = -2092.0
+offset_bottom = 1708.0
+icon = ExtResource("4_pblp7")
+
+[node name="ready" type="Button" parent="GUI"]
+layout_mode = 0
+offset_left = 2000.0
+offset_top = 1300.0
+offset_right = 2608.0
+offset_bottom = 1708.0
+icon = ExtResource("5_7srba")
+
+[node name="wins" type="Label" parent="GUI"]
+layout_mode = 0
+offset_left = -3166.0
+offset_top = -1731.0
+offset_right = -2640.0
+offset_bottom = -1300.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 250
+text = "0"
+horizontal_alignment = 1
+
+[node name="money" type="Label" parent="GUI"]
+layout_mode = 0
+offset_left = 2636.0
+offset_top = -1718.0
+offset_right = 3162.0
+offset_bottom = -1287.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 250
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="rerollCost" type="Label" parent="GUI"]
+layout_mode = 0
+offset_left = -2829.0
+offset_top = 1324.0
+offset_right = -2522.0
+offset_bottom = 1639.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 200
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="team_colour_hand" type="Label" parent="GUI"]
+visible = false
+layout_mode = 0
+offset_left = -1000.0
+offset_top = -200.0
+offset_right = 1000.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 250
+text = "HAND!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="upgradePopUp" type="Sprite2D" parent="."]
+visible = false
+z_index = 10
+scale = Vector2(5, 5)
+texture = ExtResource("12_wjank")
+
+[node name="card1pos" type="Node2D" parent="upgradePopUp"]
+position = Vector2(-170, -30)
+
+[node name="card2pos" type="Node2D" parent="upgradePopUp"]
+position = Vector2(170, -30)
+
+[node name="upgradeGUI" type="Control" parent="upgradePopUp"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="interactionBlocker" type="Panel" parent="upgradePopUp/upgradeGUI"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -750.0
+offset_top = -500.0
+offset_right = 750.0
+offset_bottom = 500.0
+
+[node name="confirm" type="Button" parent="upgradePopUp/upgradeGUI"]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 25.0
+offset_right = 708.0
+offset_bottom = 433.0
+scale = Vector2(0.18, 0.18)
+icon = ExtResource("13_fx2bg")
+
+[node name="cancel" type="Button" parent="upgradePopUp/upgradeGUI"]
+layout_mode = 0
+offset_left = -370.0
+offset_top = 25.0
+offset_right = 38.0
+offset_bottom = 433.0
+scale = Vector2(0.18, 0.18)
+icon = ExtResource("14_qjk3q")
+
+[connection signal="pressed" from="GUI/reroll" to="." method="_on_reroll_pressed"]
+[connection signal="pressed" from="GUI/ready" to="." method="_on_ready_pressed"]
+[connection signal="pressed" from="upgradePopUp/upgradeGUI/confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="upgradePopUp/upgradeGUI/cancel" to="." method="_on_cancel_pressed"]

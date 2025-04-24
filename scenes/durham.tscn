@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm8p4o15ouf0x"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_lc2ga"]
+[ext_resource type="Texture2D" uid="uid://woujipgwdk6v" path="res://assets/friends/Durham.jpg" id="2_8nv6m"]
+[ext_resource type="Script" path="res://scripts/friends/durham.gd" id="2_yns3t"]
+
+[node name="Durham" instance=ExtResource("1_lc2ga")]
+script = ExtResource("2_yns3t")
+card_name = "Durham"
+cost = 10
+hp = 28
+attack = 4
+x = 1
+target = 4
+ability = "HURT: +1 coin"
+upgradedAbility = "HURT: +1 coin 
+DIE: +3 coin"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -233)
+scale = Vector2(0.21, 0.21)
+texture = ExtResource("2_8nv6m")

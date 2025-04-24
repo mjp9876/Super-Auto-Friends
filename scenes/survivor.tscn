@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvn5dvusja0id"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_twkm7"]
+[ext_resource type="Texture2D" uid="uid://c5bge066rk4is" path="res://assets/friends/Survivor.png" id="2_fjwro"]
+[ext_resource type="Script" path="res://scripts/friends/survivor.gd" id="2_ogwtp"]
+
+[node name="Survivor" instance=ExtResource("1_twkm7")]
+script = ExtResource("2_ogwtp")
+card_name = "Survivor"
+cost = 8
+hp = 38
+attack = 5
+x = 1
+target = 5
+colour = 1
+ability = "AFTER ATTACK: n (N) - 1, If hp < 0 and n (N) > 0: hp = 4"
+upgradedAbility = "START BATTLE: n + 2
+AFTER ATTACK: n (N) - 1, If hp < 0 and n (N) > 0: hp = 24"
+n = 4
+catagory = 2
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -234)
+scale = Vector2(2, 2)
+texture = ExtResource("2_fjwro")

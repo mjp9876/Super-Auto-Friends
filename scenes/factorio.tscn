@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://bau5c5hg8yk4o"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_66hs8"]
+[ext_resource type="Texture2D" uid="uid://cyoloqbnecsul" path="res://assets/items/Factorio.png" id="2_at43r"]
+[ext_resource type="Script" path="res://scripts/items/factorio.gd" id="2_jdwmo"]
+
+[node name="Factorio" instance=ExtResource("1_66hs8")]
+script = ExtResource("2_jdwmo")
+card_name = "Factorio"
+cost = 5
+colour = 4
+ability = "+1 attack"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("2_at43r")
+
+[node name="item_stats_box" parent="." index="4"]
+visible = true
+
+[node name="hp" parent="." index="6"]
+visible = false
+
+[node name="text" parent="." index="7"]
+visible = false
+
+[node name="item_text" parent="." index="8"]
+visible = true
+
+[node name="cost" parent="item_text" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 121.0
+offset_bottom = 125.0
+
+[node name="name" parent="item_text" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 420.0
+offset_bottom = 75.0
+
+[node name="ability" parent="item_text" index="2"]
+offset_left = 0.0
+offset_right = 420.0

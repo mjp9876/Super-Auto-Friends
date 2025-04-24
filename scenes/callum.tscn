@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://btygfgct3ewe"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_ek32h"]
+[ext_resource type="Texture2D" uid="uid://l4paws03p0gc" path="res://assets/friends/Callum.png" id="2_r2jaw"]
+[ext_resource type="Script" path="res://scripts/friends/callum.gd" id="2_tmkc4"]
+
+[node name="Callum" instance=ExtResource("1_ek32h")]
+script = ExtResource("2_tmkc4")
+card_name = "Callum"
+cost = 13
+hp = 52
+attack = 5
+x = 2
+target = 2
+colour = 3
+ability = "DIE: Deal n (N) attack to the back card of the team(s) that killed this
+HURT: n + 4"
+upgradedAbility = "DIE: Deal n (N) attack to the back card of the team(s) that killed this
+HURT: n + 8"
+n = 10
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -236)
+scale = Vector2(0.52, 0.52)
+texture = ExtResource("2_r2jaw")

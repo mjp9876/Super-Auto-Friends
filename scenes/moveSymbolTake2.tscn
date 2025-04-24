@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbkn0c2micloa"]
+
+[ext_resource type="Texture2D" uid="uid://l324mx35p05q" path="res://icon.svg" id="1_d1ls4"]
+[ext_resource type="Script" path="res://scripts/moveSymbolTake2.gd" id="1_j06jg"]
+
+[node name="MoveSymbolTake2" type="Node2D"]
+script = ExtResource("1_j06jg")
+
+[node name="symbol" type="Sprite2D" parent="."]
+z_index = 20
+position = Vector2(2.08165e-12, 2.08165e-12)
+texture = ExtResource("1_d1ls4")
+
+[node name="Control" type="Control" parent="symbol"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="symbol/Control"]
+layout_mode = 0
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 150
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="die" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="die" to="." method="_on_die_timeout"]

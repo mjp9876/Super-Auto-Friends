@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce6exrgwfgr34"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_yioyu"]
+[ext_resource type="Texture2D" uid="uid://w6jgod5xbrtj" path="res://assets/friends/Tin Can.png" id="2_0v6pg"]
+[ext_resource type="Script" path="res://scripts/friends/tin_can.gd" id="2_43l14"]
+
+[node name="Tin Can" instance=ExtResource("1_yioyu")]
+script = ExtResource("2_43l14")
+card_name = "Tin Can"
+cost = 3
+hp = 6
+attack = 2
+x = 3
+ability = "BUY CARD: Give it +1 attack"
+upgradedAbility = "BUY CARD: Give it +1 X"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -237)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_0v6pg")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2vifmeemfyot"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_761f7"]
+[ext_resource type="Script" path="res://scripts/friends/assassin.gd" id="2_vw8l8"]
+[ext_resource type="Texture2D" uid="uid://vmmcej3fmpsy" path="res://assets/friends/Assassin.png" id="2_xow41"]
+
+[node name="Assassin" instance=ExtResource("1_761f7")]
+script = ExtResource("2_vw8l8")
+card_name = "Assassin"
+cost = 2
+hp = 18
+attack = 14
+x = 1
+target = 3
+colour = 3
+ability = "DIE: Remove from your team"
+upgradedAbility = "BEFORE ATTACK: Deal 12 attack to active opponent with the least hp 
+DIE: Remove from your team"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -232)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_xow41")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

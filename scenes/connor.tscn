@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://k3fv0mxeuhhs"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_ci4xo"]
+[ext_resource type="Script" path="res://scripts/friends/connor.gd" id="2_3dtc5"]
+[ext_resource type="Texture2D" uid="uid://bjj6jtmw7o2yb" path="res://assets/friends/connor.png" id="2_bcdeg"]
+
+[node name="Connor" instance=ExtResource("1_ci4xo")]
+script = ExtResource("2_3dtc5")
+card_name = "Connor"
+cost = 9
+hp = 23
+attack = 7
+x = 1
+target = 3
+colour = 1
+ability = "FRIEND AHEAD ATTACKS: Deal 28 attack to a random opponent card"
+upgradedAbility = "FRIEND AHEAD ATTACKS: Deal 48 attack to a random opponent card"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("2_bcdeg")

@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://hi4crpc3udxf"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_5lw58"]
+[ext_resource type="Texture2D" uid="uid://cyf7kan84aoiq" path="res://assets/items/Weed.png" id="2_gu86d"]
+[ext_resource type="Script" path="res://scripts/items/weed.gd" id="2_kg0cb"]
+
+[node name="Weed" instance=ExtResource("1_5lw58")]
+script = ExtResource("2_kg0cb")
+card_name = "Weed"
+cost = 7
+colour = 4
+ability = "Remove ability, +2 attack"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_gu86d")
+
+[node name="item_stats_box" parent="." index="4"]
+visible = true
+
+[node name="hp" parent="." index="6"]
+visible = false
+
+[node name="text" parent="." index="7"]
+visible = false
+
+[node name="item_text" parent="." index="8"]
+visible = true
+
+[node name="cost" parent="item_text" index="0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 121.0
+offset_bottom = 125.0
+
+[node name="name" parent="item_text" index="1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 420.0
+offset_bottom = 75.0
+
+[node name="ability" parent="item_text" index="2"]
+offset_left = 0.0
+offset_right = 420.0

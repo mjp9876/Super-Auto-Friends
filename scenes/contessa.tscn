@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0w3oynksj0qu"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_w204r"]
+[ext_resource type="Script" path="res://scripts/friends/contessa.gd" id="2_sw3o2"]
+[ext_resource type="Texture2D" uid="uid://dihq2pcm7gyqh" path="res://assets/friends/Contessa.png" id="2_yub7o"]
+
+[node name="Contessa" instance=ExtResource("1_w204r")]
+script = ExtResource("2_sw3o2")
+card_name = "Contessa"
+cost = 5
+hp = 12
+attack = 2
+x = 3
+colour = 3
+ability = "FRIEND AHEAD ATTACKS: If the friend ahead has 8 hp or less, give them +8 hp"
+upgradedAbility = "FRIEND AHEAD ATTACKS: If the friend ahead has 18 hp or less, give them +8 hp"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_yub7o")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://byn7ojpvey3hu"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_16m7j"]
+[ext_resource type="Texture2D" uid="uid://bokjpjkikriei" path="res://assets/friends/Bohemian Rhapsody.png" id="2_ew5fl"]
+[ext_resource type="Script" path="res://scripts/friends/bohemian_rhapsody.gd" id="2_jb1i3"]
+
+[node name="Bohemian Rhapsody" instance=ExtResource("1_16m7j")]
+script = ExtResource("2_jb1i3")
+card_name = "Bohemian Rhapsody"
+cost = 5
+hp = 10
+attack = 7
+x = 1
+target = 1
+ability = "BUY: Give all red cards in the shop +14 hp 
+ reroll_icon : Give all unlocked red cards in the shop +14 hp "
+upgradedAbility = "BUY: Give all red cards in the shop +24 hp 
+ reroll_icon : Give all unlocked red cards in the shop +24 hp "
+catagory = 8
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_ew5fl")

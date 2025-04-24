@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b571tcq7rm3im"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_cy78a"]
+[ext_resource type="Texture2D" uid="uid://dju5rnn7kada0" path="res://assets/friends/I Prefer Contactless.png" id="2_8tmwt"]
+[ext_resource type="Script" path="res://scripts/friends/i_prefer_contactless.gd" id="2_62ee4"]
+
+[node name="I Prefer Contactless" instance=ExtResource("1_cy78a")]
+script = ExtResource("2_62ee4")
+card_name = "I Prefer Contactless"
+cost = 4
+hp = 12
+attack = 6
+x = 1
+target = 3
+colour = 2
+ability = "SELL RED CARD: +2 coin"
+upgradedAbility = "BUY GREEN CARD: +5 hp 
+SELL RED CARD: +2 coin"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("2_8tmwt")

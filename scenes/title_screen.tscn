@@ -1,0 +1,98 @@
+[gd_scene load_steps=7 format=3 uid="uid://60l3fedhcech"]
+
+[ext_resource type="Script" path="res://scripts/multiplayer_controller.gd" id="1_11wjh"]
+[ext_resource type="Texture2D" uid="uid://ijnwxay3h2o7" path="res://assets/shopBackground.png" id="1_ki2xd"]
+[ext_resource type="Texture2D" uid="uid://bvy5phjrdnho5" path="res://assets/p1token.png" id="3_xamho"]
+[ext_resource type="Texture2D" uid="uid://ix4yqyablyup" path="res://assets/p2token.png" id="4_66epa"]
+[ext_resource type="Texture2D" uid="uid://bly53oilpvys5" path="res://assets/p3token.png" id="5_3igbm"]
+[ext_resource type="Texture2D" uid="uid://c4nd641bv6t8g" path="res://assets/p4token.png" id="6_mjywk"]
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource("1_11wjh")
+
+[node name="background" type="Sprite2D" parent="."]
+texture = ExtResource("1_ki2xd")
+
+[node name="create_game" type="Button" parent="."]
+offset_left = -467.0
+offset_top = -250.0
+offset_right = -98.0
+offset_bottom = -124.0
+theme_override_font_sizes/font_size = 50
+text = "Create Game"
+
+[node name="join_game" type="Button" parent="."]
+offset_left = 142.0
+offset_top = -252.0
+offset_right = 511.0
+offset_bottom = -126.0
+theme_override_font_sizes/font_size = 50
+text = "Join Game"
+
+[node name="start_game" type="Button" parent="."]
+visible = false
+offset_left = -185.0
+offset_top = 99.0
+offset_right = 184.0
+offset_bottom = 245.0
+theme_override_font_sizes/font_size = 50
+text = "Start
+ Game"
+
+[node name="enter_address" type="LineEdit" parent="."]
+offset_left = -339.0
+offset_top = -93.0
+offset_right = 341.0
+offset_bottom = 1.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Enter Adress"
+
+[node name="wins" type="LineEdit" parent="."]
+visible = false
+offset_left = -595.0
+offset_top = 227.0
+offset_right = -439.0
+offset_bottom = 310.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "10"
+
+[node name="adress_text" type="Label" parent="."]
+offset_left = -274.0
+offset_top = -254.0
+offset_right = 292.0
+offset_bottom = -124.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="tokenP1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-392, 5)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_xamho")
+
+[node name="tokenP2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-140, 6)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_66epa")
+
+[node name="tokenP3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(193, 2)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_3igbm")
+
+[node name="tokenP4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(442, 3)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_mjywk")
+
+[connection signal="pressed" from="create_game" to="." method="_on_create_game_pressed"]
+[connection signal="pressed" from="join_game" to="." method="_on_join_game_pressed"]
+[connection signal="pressed" from="start_game" to="." method="_on_start_game_pressed"]

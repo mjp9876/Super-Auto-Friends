@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://noohgvnuwi1l"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_22svl"]
+[ext_resource type="Texture2D" uid="uid://dxhq1ke8m30du" path="res://assets/friends/Wingspan.png" id="2_5q5jx"]
+[ext_resource type="Script" path="res://scripts/friends/wingspan.gd" id="2_vsld5"]
+
+[node name="Wingspan" instance=ExtResource("1_22svl")]
+script = ExtResource("2_vsld5")
+card_name = "Wingspan"
+cost = 4
+hp = 24
+attack = 5
+x = 2
+target = 5
+colour = 3
+ability = "SELL: reroll_icon , then upgrade 2 random friends in the shop"
+upgradedAbility = "SELL: reroll_icon , then upgrade 4 random friends in the shop"
+catagory = 1
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -233)
+scale = Vector2(0.59, 0.59)
+texture = ExtResource("2_5q5jx")

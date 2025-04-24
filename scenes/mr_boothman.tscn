@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bah2so1mwxys7"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_fm2eg"]
+[ext_resource type="Texture2D" uid="uid://ct7d0j7w0gcqj" path="res://assets/friends/Mr Boothman.png" id="2_2u57t"]
+[ext_resource type="Script" path="res://scripts/friends/mr_boothman.gd" id="2_tje0u"]
+
+[node name="Mr Boothman" instance=ExtResource("1_fm2eg")]
+script = ExtResource("2_tje0u")
+card_name = "Mr. Boothman"
+cost = 3
+hp = 23
+attack = 5
+x = 1
+target = 4
+colour = 1
+ability = "START TURN: +1 coin for each sport or exercise in your team"
+upgradedAbility = "START TURN: +2 coin for each sport or exercise in your team"
+catagory = 10
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_2u57t")

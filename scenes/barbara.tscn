@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cto2dpjf2kf80"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_si0fq"]
+[ext_resource type="Script" path="res://scripts/friends/barbra.gd" id="2_ujg6c"]
+[ext_resource type="Texture2D" uid="uid://bndif1pdn17b1" path="res://assets/friends/Barbra.png" id="3_276hf"]
+
+[node name="Barbara" instance=ExtResource("1_si0fq")]
+script = ExtResource("2_ujg6c")
+card_name = "Barbara"
+cost = 14
+hp = 42
+attack = 5
+x = 2
+target = 3
+colour = 1
+ability = "BUY: Discount all items in the shop to 0 coin 
+END TURN: Give all other parents in your team +4 hp +1 attack"
+upgradedAbility = "USE ITEM: Discount all items in the shop by 5 coin 
+END TURN: Give all other parents in your team +4 hp +1 attack"
+catagory = 5
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -232)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_276hf")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

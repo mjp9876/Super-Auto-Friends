@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp4hlgkfkdmuu"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_v23el"]
+[ext_resource type="Texture2D" uid="uid://dwvlbtxoiyu52" path="res://assets/friends/Alike Seamen.png" id="2_6somk"]
+[ext_resource type="Script" path="res://scripts/friends/alike_seamen.gd" id="2_rukey"]
+
+[node name="Alike Seamen" instance=ExtResource("1_v23el")]
+script = ExtResource("2_rukey")
+card_name = "Alike Seamen"
+cost = 4
+hp = 7
+attack = 4
+x = 1
+target = 4
+colour = 1
+ability = "END TURN: Give one random friend +1 attack"
+upgradedAbility = "END TURN: Give the friend ahead +1 attack"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.79, 0.79)
+texture = ExtResource("2_6somk")

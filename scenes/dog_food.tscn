@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://du4laj6jbeuft"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_4etcg"]
+[ext_resource type="Script" path="res://scripts/friends/dog_food.gd" id="2_jup30"]
+[ext_resource type="Texture2D" uid="uid://d03astx7iclx8" path="res://assets/friends/Dog Food.png" id="2_tso3v"]
+
+[node name="Dog Food" instance=ExtResource("1_4etcg")]
+script = ExtResource("2_jup30")
+card_name = "Dog Food"
+cost = 5
+hp = 11
+attack = 2
+x = 3
+colour = 2
+ability = "BUY: Give all yellow friends +12 hp
+START BATTLE: Give all dogs in your team +12 hp"
+upgradedAbility = "START BATTLE: Give all yellow friends in your team +12 hp , then give all dogs in your team +12 hp"
+catagory = 9
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -231)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_tso3v")
