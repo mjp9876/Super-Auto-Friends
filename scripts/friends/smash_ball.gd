@@ -80,8 +80,8 @@ func die(_killers):
 				target_friend.setStatText()
 				await proc()
 
-func smash_char_in_arr(x):
-	if x != null:
-		return x.catagory == catagories.SUPER_SMASH_BROS
+func smash_char_in_arr(a):
+	if a != null:
+		return a.catagory == catagories.SUPER_SMASH_BROS
 	else:
 		return false
