@@ -1,7 +1,7 @@
 extends Card
 
 
-func start_turn():
+func end_turn():
 	if not blocked_ability:
 		await Manager.update_friends()
 		var target_friend1 = null

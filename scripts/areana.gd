@@ -84,6 +84,8 @@ var shared_p4stats
 var can_start_round = false
 var can_start_to_fight = [false, false, false, false]
 
+var test_mode = false
+
 func _ready():
 	p1stats = Manager.statsP1.duplicate()
 	p2stats = Manager.statsP2.duplicate()
@@ -103,6 +105,11 @@ func _process(_delta):
 		await get_tree().create_timer(0.07).timeout
 	if Input.is_action_just_pressed("kickstart_fighting"):
 		Manager.ready_players = 4
+		can_start_to_fight = [true, true, true, true]
+		test_mode = true
+		shared_p2stats = [0, 0, "test"]
+		shared_p3stats = [0, 0, "test"]
+		shared_p4stats = [0, 0, "test"]
 
 @rpc("any_peer", "call_local")
 func start_round():
@@ -224,6 +231,23 @@ func prepare_cards():
 		p4team.append(null)
 	"""
 	for i in range(6):
+		if test_mode:
+			Manager.teamP2 = [null, null, null, null, null, null]
+			Manager.teamP3 = [null, null, null, null, null, null]
+			Manager.teamP4 = [null, null, null, null, null, null]
+			p2team_data = [null, null, null, null, null, null]
+			p3team_data = [null, null, null, null, null, null]
+			p4team_data = [null, null, null, null, null, null]
+			for j in range(2):
+				Manager.teamP2[j] = load("res://scenes/slap.tscn").instantiate()
+				Manager.teamP3[j] = load("res://scenes/january_5_th.tscn").instantiate()
+				Manager.teamP4[j] = load("res://scenes/eu_4.tscn").instantiate()
+				Manager.teamP2[j].gather_fighting_info()
+				Manager.teamP3[j].gather_fighting_info()
+				Manager.teamP4[j].gather_fighting_info()
+				p2team_data[j] = Manager.convert_card_to_data(Manager.teamP2[j])
+				p3team_data[j] = Manager.convert_card_to_data(Manager.teamP3[j])
+				p4team_data[j] = Manager.convert_card_to_data(Manager.teamP4[j])
 		if Manager.teamP1.size() > i and Manager.teamP1[i] != null:
 			p1team[i] = Manager.teamP1[i].duplicate()
 			p1team[i].inBattle = true

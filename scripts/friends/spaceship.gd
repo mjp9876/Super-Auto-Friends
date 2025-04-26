@@ -17,23 +17,23 @@ func start_battle():
 			setStatText()
 			await proc()
 
-func find_colour_team_mates(arena_scene, this_colour):
+func find_colour_team_mates(arena_scene, this_colour3):
 	var red_team_mates_found = 0
 	match team_number:
 		1:
 			for opponent in arena_scene.p1cards:
-				if opponent.card_name != "ghost" and opponent.hp > 0 and opponent.colour == this_colour:
+				if opponent.card_name != "ghost" and opponent.hp > 0 and opponent.colour == this_colour3:
 					red_team_mates_found += 1
 		2:
 			for opponent in arena_scene.p2cards:
-				if opponent.card_name != "ghost" and opponent.hp > 0 and opponent.colour == this_colour:
+				if opponent.card_name != "ghost" and opponent.hp > 0 and opponent.colour == this_colour3:
 					red_team_mates_found += 1
 		3:
 			for opponent in arena_scene.p3cards:
-				if opponent.card_name != "ghost" and opponent.hp > 0 and opponent.colour == this_colour:
+				if opponent.card_name != "ghost" and opponent.hp > 0 and opponent.colour == this_colour3:
 					red_team_mates_found += 1
 		4:
 			for opponent in arena_scene.p4cards:
-				if opponent.card_name != "ghost" and opponent.hp > 0 and opponent.colour == this_colour:
+				if opponent.card_name != "ghost" and opponent.hp > 0 and opponent.colour == this_colour3:
 					red_team_mates_found += 1
 	return red_team_mates_found
