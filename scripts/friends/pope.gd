@@ -21,6 +21,7 @@ func hurt(attacker):
 			image.scale = Vector2(1,1)
 			setStatText()
 			setAbilityText()
+			await Manager.card_summoned(team_number,self)
 			
 			
 		await proc()
