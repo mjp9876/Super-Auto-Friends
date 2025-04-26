@@ -8,7 +8,6 @@ func end_turn():
 		if not upgraded:
 			for friend in Manager.friends:
 				if friend != null:
-					print(friend.card_name)
 					friend.cost += friend.cost / 5
 					Manager.move_symbol(global_position, friend.global_position, coin_icon, "+" + str(friend.cost / 5))
 					friend.setStatText()
@@ -18,4 +17,4 @@ func end_turn():
 					friend.cost += friend.cost * 0.3
 					Manager.move_symbol(global_position, friend.global_position, coin_icon, "+" + str(int(friend.cost * 0.3)))
 					friend.setStatText()
-	await proc()
+		await proc()
