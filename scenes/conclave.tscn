@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlk4hnjokrpvk"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_4v8tf"]
+
+[node name="conclave" instance=ExtResource("1_4v8tf")]
+card_name = "Conclave"
+cost = 7
+hp = 15
+attack = 5
+x = 2
+colour = 2
+ability = "FRIEND HURT: Hurt friend gains 5 hp"
+upgradedAbility = "FRIEND HURT: Hurt friend gains 12 hp"

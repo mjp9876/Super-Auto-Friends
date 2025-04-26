@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://hfr5sgq3giru"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_4fkri"]
+[ext_resource type="Script" path="res://scripts/friends/elon_musk.gd" id="2_6fcd1"]
+[ext_resource type="Texture2D" uid="uid://clajvjekpxm64" path="res://assets/friends/elonsalute.jpg" id="3_c0qge"]
+
+[node name="elon_musk" instance=ExtResource("1_4fkri")]
+script = ExtResource("2_6fcd1")
+card_name = "Elon Musk"
+cost = 7
+hp = 17
+attack = 4
+x = 1
+target = 2
+colour = 1
+ability = "END TURN: All friends +20% sell value"
+upgradedAbility = "END TURN: All friends +30% sell value"
+
+[node name="image" parent="." index="1"]
+position = Vector2(29.463, -240.663)
+scale = Vector2(0.787, 1.00254)
+texture = ExtResource("3_c0qge")
+
+[node name="card_collision" parent="Area2D" index="0"]
+position = Vector2(-11, -1)
