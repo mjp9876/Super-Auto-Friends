@@ -394,7 +394,8 @@ func findClosestRestNode():
 		lock_sprite.visible = false
 		rest_point.shopScene.updateText()
 		buy()
-		Manager.card_bought(self)
+		await Manager.card_bought(self)
+		await Manager.card_summoned(team_number, self)
 	elif target_point.type == target_point.types.SELL and shortest_distance < 80000 and not inShop and card_name != "The Beatles":
 		if rest_point != null:
 			if rest_point.card == self:
@@ -553,6 +554,9 @@ func buy():
 func buy_card(_card):
 	pass
 
+func friend_summoned(_friend):
+	pass
+
 func sell():
 	pass
 
@@ -590,6 +594,9 @@ func kill(_dead_team, _dead_team_index):
 	pass
 
 func hurt(_attacker):
+	pass
+
+func enemy_summoned(_enemy):
 	pass
 
 func die(_killers):
@@ -697,3 +704,29 @@ func attack_opponent(opponent, damage_to_deal, arena_scene):
 					for i in range(1, arena_scene.p4cards.size()):
 						arena_scene.card_proc_order_backup.append([arena_scene.p4cards[i], opponent.catagory])
 
+func new_card_summoned(team, new_card):
+	var arena_scene = get_tree().get_first_node_in_group("arena")
+	for opponent in arena_scene.p1cards:
+		if opponent.card_name != "ghost" and opponent.hp > 0:
+			if opponent.team_number == team:
+				await opponent.friend_summoned(new_card)
+			else:
+				await opponent.enemy_summoned(new_card)
+	for opponent in arena_scene.p2cards:
+		if opponent.card_name != "ghost" and opponent.hp > 0:
+			if opponent.team_number == team:
+				await opponent.friend_summoned(new_card)
+			else:
+				await opponent.enemy_summoned(new_card)
+	for opponent in arena_scene.p3cards:
+		if opponent.card_name != "ghost" and opponent.hp > 0:
+			if opponent.team_number == team:
+				await opponent.friend_summoned(new_card)
+			else:
+				await opponent.enemy_summoned(new_card)
+	for opponent in arena_scene.p4cards:
+		if opponent.card_name != "ghost" and opponent.hp > 0:
+			if opponent.team_number == team:
+				await opponent.friend_summoned(new_card)
+			else:
+				await opponent.enemy_summoned(new_card)

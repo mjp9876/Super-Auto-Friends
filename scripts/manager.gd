@@ -1,5 +1,6 @@
 extends Node
 
+
 var rng = RandomNumberGenerator.new()
 
 var move_symbol_scene = preload("res://scenes/moveSymbolTake2.tscn")
@@ -473,3 +474,11 @@ func add_to_ready_players(player_number):
 	ready_players = ready_players_tracker.count(true)
 	if ready_players == 4:
 		ready_players_tracker = [false, false, false, false]
+
+func card_summoned(team, new_card):
+	if new_card.inBattle:
+		await new_card.new_card_summoned(team, new_card)
+	else:
+		for friend in friends:
+			if friend != null and friend != new_card:
+				await friend.friend_summoned(new_card)
