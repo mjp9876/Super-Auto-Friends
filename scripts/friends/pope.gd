@@ -10,7 +10,7 @@ func hurt(_attacker):
 			hp = 25
 			attack = 5
 			x = 2
-			this_x = 2
+			this_x = 0
 			target = targets.CLOCKWISE
 			colour = colours.GREEN
 			if upgraded:

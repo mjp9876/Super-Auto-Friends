@@ -238,7 +238,7 @@ func prepare_cards():
 			p2team_data = [null, null, null, null, null, null]
 			p3team_data = [null, null, null, null, null, null]
 			p4team_data = [null, null, null, null, null, null]
-			for j in range(2):
+			for j in range(3):
 				Manager.teamP2[j] = load("res://scenes/january_5_th.tscn").instantiate()
 				Manager.teamP3[j] = load("res://scenes/january_5_th.tscn").instantiate()
 				Manager.teamP4[j] = load("res://scenes/king_de_de_de.tscn").instantiate()

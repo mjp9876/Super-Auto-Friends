@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx7psoghjb8kr"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_5fggt"]
+[ext_resource type="Script" path="res://scripts/friends/security_guard.gd" id="2_amvns"]
+[ext_resource type="Texture2D" uid="uid://bbnjowhgqf72u" path="res://assets/friends/Security Guard.png" id="2_hi3vi"]
+
+[node name="Security Guard" instance=ExtResource("1_5fggt")]
+script = ExtResource("2_amvns")
+card_name = "Security Guard"
+cost = 7
+hp = 15
+attack = 5
+x = 2
+target = 2
+colour = 3
+ability = "DIE IN BATTLE: Summon a random animatronic"
+upgradedAbility = "DIE IN BATTLE: Summon a random animatronic (50% chance to be Foxy)"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -240)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_hi3vi")
