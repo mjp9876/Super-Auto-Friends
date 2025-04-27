@@ -16,7 +16,10 @@ func hurt(hurter):
 				hp = 35
 				attack = 2
 				x = 4
-				this_x = 0
+				if active:
+					this_x = 0
+				else:
+					this_x = x
 				target = targets.MOST_HP
 				colour = colours.RED
 				ability = "HURT: Remove 40% hp from the card that hurt this"

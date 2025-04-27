@@ -9,7 +9,10 @@ func hurt(_hurter):
 			hp = 1
 			attack = 5
 			x = 1
-			this_x = 0
+			if active:
+				this_x = 0
+			else:
+				this_x = x
 			target = targets.MOST_WINS
 			choice = "not died"
 			upgradedAbility = "DIE: Kill all active cards"

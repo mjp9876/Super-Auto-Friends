@@ -10,7 +10,10 @@ func hurt(_attacker):
 			hp = 25
 			attack = 5
 			x = 2
-			this_x = 0
+			if active:
+				this_x = 0
+			else:
+				this_x = x
 			target = targets.CLOCKWISE
 			colour = colours.GREEN
 			if upgraded:
@@ -18,7 +21,7 @@ func hurt(_attacker):
 			else:
 				ability = "FRIEND AHEAD ATTACKS: Attacking friend gains 10 hp" # check if that friend has more than 0 health
 			image.texture = load("res://assets/friends/conclave.jpg")
-			image.scale = Vector2(1,1)
+			image.scale = Vector2(0.96, 0.96)
 			setStatText()
 			setAbilityText()
 			await proc()

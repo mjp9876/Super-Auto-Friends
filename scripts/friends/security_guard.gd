@@ -18,7 +18,10 @@ func hurt(_hurter):
 					hp = 30
 					attack = 3
 					x = 3
-					this_x = 0
+					if active:
+						this_x = 0
+					else:
+						this_x = x
 					target = targets.CLOCKWISE
 					colour = colours.RED
 					image.texture = load("res://assets/friends/Freddy Fazbear.png")
@@ -28,7 +31,10 @@ func hurt(_hurter):
 					hp = 40
 					attack = 2
 					x = 2
-					this_x = 0
+					if active:
+						this_x = 0
+					else:
+						this_x = x
 					target = targets.MOST_HP
 					colour = colours.YELLOW
 					image.texture = load("res://assets/friends/Chica.png")
@@ -38,7 +44,10 @@ func hurt(_hurter):
 					hp = 10
 					attack = 4
 					x = 4
-					this_x = 0
+					if active:
+						this_x = 0
+					else:
+						this_x = x
 					target = targets.MOST_ATTACK
 					colour = colours.BLUE
 					image.texture = load("res://assets/friends/Bonnie.png")
@@ -48,7 +57,10 @@ func hurt(_hurter):
 					hp = 40
 					attack = 4
 					x = 4
-					this_x = 0
+					if active:
+						this_x = 0
+					else:
+						this_x = x
 					target = targets.MOST_WINS
 					colour = colours.RED
 					image.texture = load("res://assets/friends/Foxy.png")

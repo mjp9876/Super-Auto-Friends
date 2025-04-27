@@ -241,7 +241,7 @@ func prepare_cards():
 			for j in range(3):
 				Manager.teamP2[j] = load("res://scenes/january_5_th.tscn").instantiate()
 				Manager.teamP3[j] = load("res://scenes/january_5_th.tscn").instantiate()
-				Manager.teamP4[j] = load("res://scenes/king_de_de_de.tscn").instantiate()
+				Manager.teamP4[j] = load("res://scenes/security_guard.tscn").instantiate()
 				Manager.teamP2[j].gather_fighting_info()
 				Manager.teamP3[j].gather_fighting_info()
 				Manager.teamP4[j].gather_fighting_info()
