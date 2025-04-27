@@ -8,7 +8,7 @@ func reroll():
 		for friend in Manager.friends:
 			if friend != null and friend.catagory == catagories.TABLETOP_GAMES:
 				tabletop_friends_in_team += 1
-		if tabletop_friends_in_team > 1:
+		if tabletop_friends_in_team >= 1:
 			proc()
 			await get_tree().create_timer(0.2).timeout
 			Manager.money += tabletop_friends_in_team

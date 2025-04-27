@@ -1,8 +1,31 @@
 extends Card
 
 
+func hurt(_hurter):
+	if not blocked_ability and card_name == "Jester":
+		var image = get_node("image")
+		if hp <= 0:
+			card_name = "Vengeful Spirit"
+			hp = 1
+			attack = 5
+			x = 1
+			this_x = 1
+			target = targets.MOST_WINS
+			choice = "not died"
+			upgradedAbility = "DIE: Kill all active cards"
+			ability = "DIE: Kill the card(s) that killed this"
+			image.texture = load("res://assets/friends/Jester Ghost.png")
+			image.scale = Vector2(0.56,0.56)
+			setStatText()
+			setAbilityText()
+			setTarget()
+			await proc()
+			await Manager.card_summoned(team_number, self)
+
 func die(killers):
-	if not blocked_ability and inBattle:
+	if not blocked_ability and card_name == "Vengeful Spirit" and choice == "not died":
+		choice = "died"
+	elif not blocked_ability and inBattle and card_name == "Vengeful Spirit":
 		var arena_scene = get_tree().get_first_node_in_group("arena")
 		var possible_targets = []
 		if not upgraded:

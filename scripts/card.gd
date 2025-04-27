@@ -709,24 +709,28 @@ func new_card_summoned(team, new_card):
 	for opponent in arena_scene.p1cards:
 		if opponent.card_name != "ghost" and opponent.hp > 0:
 			if opponent.team_number == team:
+				await opponent.friend_dies(new_card.catagory)
 				await opponent.friend_summoned(new_card)
 			else:
 				await opponent.enemy_summoned(new_card)
 	for opponent in arena_scene.p2cards:
 		if opponent.card_name != "ghost" and opponent.hp > 0:
 			if opponent.team_number == team:
+				await opponent.friend_dies(new_card.catagory)
 				await opponent.friend_summoned(new_card)
 			else:
 				await opponent.enemy_summoned(new_card)
 	for opponent in arena_scene.p3cards:
 		if opponent.card_name != "ghost" and opponent.hp > 0:
 			if opponent.team_number == team:
+				await opponent.friend_dies(new_card.catagory)
 				await opponent.friend_summoned(new_card)
 			else:
 				await opponent.enemy_summoned(new_card)
 	for opponent in arena_scene.p4cards:
 		if opponent.card_name != "ghost" and opponent.hp > 0:
 			if opponent.team_number == team:
+				await opponent.friend_dies(new_card.catagory)
 				await opponent.friend_summoned(new_card)
 			else:
 				await opponent.enemy_summoned(new_card)

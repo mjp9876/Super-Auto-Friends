@@ -2,7 +2,7 @@ extends Card
 
 
 # Called when the node enters the scene tree for the first time.
-func hurt(attacker):
+func hurt(_attacker):
 	if not blocked_ability and card_name != "Conclave":
 		var image = get_node("image")
 		if hp <= 0:
@@ -11,8 +11,8 @@ func hurt(attacker):
 			attack = 5
 			x = 2
 			this_x = 2
-			target = 0
-			colour = 2
+			target = targets.CLOCKWISE
+			colour = colours.GREEN
 			if upgraded:
 				upgradedAbility = "FRIEND AHEAD ATTACKS: Attacking friend gains 20 hp"
 			else:
@@ -21,11 +21,9 @@ func hurt(attacker):
 			image.scale = Vector2(1,1)
 			setStatText()
 			setAbilityText()
-			
-			
-		await proc()
-		
-		
+			await proc()
+			await Manager.card_summoned(team_number, self)
+
 func friend_ahead_attacks(friend):
 	if card_name == "Conclave" and friend.hp > 0 and not blocked_ability:
 		if not upgraded:
