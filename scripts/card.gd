@@ -666,7 +666,7 @@ func quick_proc():
 func attack_opponent(opponent, damage_to_deal, arena_scene):
 	opponent.hp -= damage_to_deal
 	await Manager.move_symbol(global_position, opponent.global_position, attack_icon, str(damage_to_deal))
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(0.1).timeout
 	await opponent.hurt(self)
 	if opponent.hp <= 0:
 		match team_number:

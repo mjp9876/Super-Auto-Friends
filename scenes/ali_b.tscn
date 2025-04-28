@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://byua4arsigvns"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_e03f6"]
+[ext_resource type="Texture2D" uid="uid://lqdbat631fb6" path="res://assets/friends/Ali B.png" id="2_75xth"]
+[ext_resource type="Script" path="res://scripts/friends/ali_b.gd" id="2_tsuph"]
+
+[node name="Ali B" instance=ExtResource("1_e03f6")]
+script = ExtResource("2_tsuph")
+card_name = "Ali B"
+cost = 5
+hp = 22
+attack = 8
+x = 1
+target = 2
+colour = 2
+ability = "DIE IN BATTLE: Summon Lee Probert"
+upgradedAbility = "DIE IN BATTLE: Summon Lee Probert+"
+catagory = 10
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -235)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_75xth")

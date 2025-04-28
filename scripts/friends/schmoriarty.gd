@@ -11,12 +11,13 @@ func kill(dead_team, _dead_team_index):
 		if upgraded:
 			damage_to_deal = 44
 		possible_targets = find_target(arena_scene, dead_team)
-		for i in range(possible_targets.size()):
-			if possible_targets[i].hp > 0 and n >= 2:
-				n = 0
-				proc()
-				need_to_proc = true
-				await attack_opponent(possible_targets[i], damage_to_deal, arena_scene)
+		if n >= 2:
+			n -= 2
+			for i in range(possible_targets.size()):
+				if possible_targets[i].hp > 0:
+					proc()
+					need_to_proc = true
+					await attack_opponent(possible_targets[i], damage_to_deal, arena_scene)
 		if need_to_proc:
 			await proc()
 

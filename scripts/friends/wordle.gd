@@ -6,7 +6,6 @@ func buy():
 		choice = str(rng.randi_range(0, 4))
 
 func start_battle():
-	print(choice)
 	if not blocked_ability and str(starting_fighting_slot) == choice:
 		var hp_to_gain = 40
 		var attack_to_gain = 8
