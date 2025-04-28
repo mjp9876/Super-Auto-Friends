@@ -24,8 +24,8 @@ func _process(_delta):
 	if active:
 		if type == types.FRIEND_SHOP and card == null:
 			possible_card = Manager.all_friends[rng.randi_range(0, (Manager.all_friends.size() - 1))].instantiate()
-			#while (possible_card.cost > (Manager.round * 3) and Manager.round != 0) or (possible_card.card_name == "3 Of Clubs" and Manager.round < 3):
-			while possible_card.card_name != "Pope" and rng.randf() < 0.99:
+			while (possible_card.cost > (Manager.round * 3) and Manager.round != 0) or (possible_card.card_name == "3 Of Clubs" and Manager.round < 3):
+			#while possible_card.card_name != "Ness" and rng.randf() < 0.99:
 				possible_card = Manager.all_friends[rng.randi_range(0, (Manager.all_friends.size() - 1))].instantiate()
 			card = possible_card.duplicate()
 			card.global_position = global_position

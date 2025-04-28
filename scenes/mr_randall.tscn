@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddelp0iajv5wj"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_tdauu"]
+[ext_resource type="Texture2D" uid="uid://cwhbwi3w6wbpx" path="res://assets/friends/Mr Randall.png" id="2_6nym8"]
+[ext_resource type="Script" path="res://scripts/friends/mr_randall.gd" id="2_utaeq"]
+
+[node name="Mr Randall" instance=ExtResource("1_tdauu")]
+script = ExtResource("2_utaeq")
+card_name = "Mr. Randall"
+cost = 8
+hp = 30
+attack = 3
+x = 2
+target = 1
+colour = 2
+ability = "FRIEND SUMMONED IN BATTLE: Give the friend ahead +10 hp , +2 attack , +1 X"
+upgradedAbility = "FRIEND SUMMONED IN BATTLE: Give the friend ahead and the summoned friend +10 hp , +2 attack , +1 X"
+catagory = 10
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -240)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_6nym8")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

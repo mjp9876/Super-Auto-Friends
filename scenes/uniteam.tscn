@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c07vsh6irrotc"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_wfi4p"]
+[ext_resource type="Texture2D" uid="uid://ngr1dljv8qmc" path="res://assets/friends/Uniteam.png" id="2_arkq0"]
+[ext_resource type="Script" path="res://scripts/friends/uniteam.gd" id="2_w4ed8"]
+
+[node name="Uniteam" instance=ExtResource("1_wfi4p")]
+script = ExtResource("2_w4ed8")
+card_name = "Uniteam"
+cost = 5
+hp = 16
+attack = 1
+x = 4
+target = 1
+ability = "FRIEND SUMMONED: Give them one random: (+5 hp , +1 attack )"
+upgradedAbility = "FRIEND SUMMONED: Give them one random: (+10 hp , +2 attack )"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -240)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_arkq0")

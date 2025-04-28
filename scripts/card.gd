@@ -666,7 +666,7 @@ func quick_proc():
 func attack_opponent(opponent, damage_to_deal, arena_scene):
 	opponent.hp -= damage_to_deal
 	await Manager.move_symbol(global_position, opponent.global_position, attack_icon, str(damage_to_deal))
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(0.1).timeout
 	await opponent.hurt(self)
 	if opponent.hp <= 0:
 		match team_number:
@@ -709,24 +709,28 @@ func new_card_summoned(team, new_card):
 	for opponent in arena_scene.p1cards:
 		if opponent.card_name != "ghost" and opponent.hp > 0:
 			if opponent.team_number == team:
+				await opponent.friend_dies(new_card.catagory)
 				await opponent.friend_summoned(new_card)
 			else:
 				await opponent.enemy_summoned(new_card)
 	for opponent in arena_scene.p2cards:
 		if opponent.card_name != "ghost" and opponent.hp > 0:
 			if opponent.team_number == team:
+				await opponent.friend_dies(new_card.catagory)
 				await opponent.friend_summoned(new_card)
 			else:
 				await opponent.enemy_summoned(new_card)
 	for opponent in arena_scene.p3cards:
 		if opponent.card_name != "ghost" and opponent.hp > 0:
 			if opponent.team_number == team:
+				await opponent.friend_dies(new_card.catagory)
 				await opponent.friend_summoned(new_card)
 			else:
 				await opponent.enemy_summoned(new_card)
 	for opponent in arena_scene.p4cards:
 		if opponent.card_name != "ghost" and opponent.hp > 0:
 			if opponent.team_number == team:
+				await opponent.friend_dies(new_card.catagory)
 				await opponent.friend_summoned(new_card)
 			else:
 				await opponent.enemy_summoned(new_card)
