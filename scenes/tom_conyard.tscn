@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://tf0i7guext60"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_jyjsm"]
+[ext_resource type="Script" path="res://scripts/friends/tom_conyard.gd" id="2_2xbyx"]
+[ext_resource type="Texture2D" uid="uid://cg8eokp36mqcr" path="res://assets/friends/Tom Conyard.png" id="2_lweao"]
+
+[node name="Tom Conyard" instance=ExtResource("1_jyjsm")]
+script = ExtResource("2_2xbyx")
+card_name = "Tom Conyard"
+cost = 7
+hp = 23
+attack = 10
+x = 1
+target = 2
+colour = 3
+ability = "FRIEND SUMMONED: Give them +1 attack 
+ENEMY SUMMONED: Deal 12 attack to them"
+upgradedAbility = "FRIEND SUMMONED: Give them +2 attack 
+ENEMY SUMMONED: Deal 20 attack to them"
+
+[node name="image" parent="." index="1"]
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_lweao")

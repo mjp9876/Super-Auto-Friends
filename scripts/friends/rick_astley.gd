@@ -5,7 +5,7 @@ func card_specific_rng():
 	choice = str(rng.randf())
 
 func hurt(hurter):
-	if not blocked_ability and card_name == "Rick Astley":
+	if not blocked_ability and card_name == "Rick Astley" and inBattle:
 		var cap = 0.5
 		if upgraded:
 			cap = 0.25

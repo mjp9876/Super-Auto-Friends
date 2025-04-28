@@ -9,7 +9,7 @@ func card_specific_rng():
 	choice = options[0]
 
 func hurt(_hurter):
-	if not blocked_ability and card_name == "Security Guard":
+	if not blocked_ability and card_name == "Security Guard" and inBattle:
 		var image = get_node("image")
 		if hp <= 0:
 			match choice:

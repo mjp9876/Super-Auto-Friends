@@ -2,7 +2,7 @@ extends Card
 
 
 func hurt(_hurter):
-	if not blocked_ability and card_name == "Jester":
+	if not blocked_ability and card_name == "Jester" and inBattle:
 		var image = get_node("image")
 		if hp <= 0:
 			card_name = "Vengeful Spirit"

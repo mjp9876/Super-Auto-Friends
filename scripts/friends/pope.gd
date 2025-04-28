@@ -3,7 +3,7 @@ extends Card
 
 # Called when the node enters the scene tree for the first time.
 func hurt(_attacker):
-	if not blocked_ability and card_name != "Conclave":
+	if not blocked_ability and card_name != "Conclave" and inBattle:
 		var image = get_node("image")
 		if hp <= 0:
 			card_name = "Conclave"
