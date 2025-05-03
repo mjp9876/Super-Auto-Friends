@@ -238,10 +238,10 @@ func prepare_cards():
 			p2team_data = [null, null, null, null, null, null]
 			p3team_data = [null, null, null, null, null, null]
 			p4team_data = [null, null, null, null, null, null]
-			for j in range(2):
-				Manager.teamP2[j] = load("res://scenes/security_guard.tscn").instantiate()
-				Manager.teamP3[j] = load("res://scenes/slap.tscn").instantiate()
-				Manager.teamP4[j] = load("res://scenes/assassin.tscn").instantiate()
+			for j in range(6):
+				Manager.teamP2[j] = load("res://scenes/callum.tscn").instantiate()
+				Manager.teamP3[j] = load("res://scenes/cowey.tscn").instantiate()
+				Manager.teamP4[j] = load("res://scenes/the_deserter.tscn").instantiate()
 				Manager.teamP2[j].gather_fighting_info()
 				Manager.teamP3[j].gather_fighting_info()
 				Manager.teamP4[j].gather_fighting_info()

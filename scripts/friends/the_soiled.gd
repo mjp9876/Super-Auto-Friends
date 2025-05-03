@@ -14,7 +14,6 @@ func hurt(hurter):
 			else:
 				this_x = x
 			target = targets.LEAST_WINS
-			choice = "not died"
 			ability = "DIE: Steal 1 coin from the player(s) that killed this, summon a Poop"
 			upgradedAbility = "DIE: Steal 1 coin from the player(s) that killed this, summon a Poop"
 			image.texture = load("res://assets/friends/Giant Poop.png")
@@ -36,8 +35,6 @@ func hurt(hurter):
 			else:
 				this_x = x
 			target = targets.LEAST_WINS
-			if not upgraded:
-				choice = "not died"
 			ability = "DIE: Steal 1 coin from the player(s) that killed this"
 			upgradedAbility = "DIE: Steal 1 coin from the player(s) that killed this"
 			image.texture = load("res://assets/friends/Poop.png")
@@ -49,9 +46,7 @@ func hurt(hurter):
 			await Manager.card_summoned(team_number, self)
 
 func die(killers):
-	if not blocked_ability and card_name != "The Soiled" and choice == "not died":
-		choice = "died"
-	elif not blocked_ability and card_name != "The Soiled" and inBattle:
+	if not blocked_ability and inBattle:
 		var arena_scene = get_tree().get_first_node_in_group("arena")
 		for killer in killers:
 			match team_number:
