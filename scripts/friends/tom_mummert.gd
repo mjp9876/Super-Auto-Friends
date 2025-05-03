@@ -141,7 +141,7 @@ func hurt(hurter):
 				target = targets.RANDOM
 				colour = colours.RED
 				ability = "HURT: Deal 20 attack to the card that hurt this"
-				upgradedAbility = "HURT: Deal 20 attack to the card that hurt this"
+				upgradedAbility = "HURT: Deal 35 attack to the card that hurt this"
 				image.texture = load("res://assets/friends/Miss Piggy.png")
 				image.scale = Vector2(0.47, 0.47)
 				setStatText()

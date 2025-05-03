@@ -6,7 +6,7 @@ func hurt(_hurter):
 		var image = get_node("image")
 		if hp <= 0:
 			card_name = "Vengeful Spirit"
-			hp = 1
+			hp = 999
 			attack = 5
 			x = 1
 			if active:
@@ -36,6 +36,11 @@ func die(killers):
 		else:
 			find_possible_targets(arena_scene, possible_targets)
 			await kill_cards(possible_targets, arena_scene)
+
+func before_attack():
+	choice = "died"
+	hp = 1
+	setStatText()
 
 func kill_cards(cards_to_kill, arena_scene):
 	var need_to_proc = false
