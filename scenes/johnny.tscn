@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8x1eby2d2lnt"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_0ma8d"]
+[ext_resource type="Texture2D" uid="uid://ca0w5orsbrcoa" path="res://assets/friends/Johnny.png" id="2_h57bs"]
+[ext_resource type="Script" path="res://scripts/friends/johnny.gd" id="2_qe6ub"]
+
+[node name="Johnny" instance=ExtResource("1_0ma8d")]
+script = ExtResource("2_qe6ub")
+card_name = "Johnny"
+cost = 5
+hp = 26
+attack = 9
+x = 1
+target = 1
+colour = 1
+ability = "ANY CARD SUMMONED IN BATTLE: Give ALL yellow cards +15 hp"
+upgradedAbility = "ANY CARD SUMMONED IN BATTLE: Give ALL yellow cards +30 hp"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -240)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_h57bs")

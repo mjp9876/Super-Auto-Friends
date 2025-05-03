@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://3t6etmeh5s7f"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_q2wti"]
+[ext_resource type="Script" path="res://scripts/friends/the_soiled.gd" id="2_gmh4l"]
+[ext_resource type="Texture2D" uid="uid://cj6ib4mshrffm" path="res://assets/friends/The Soiled.png" id="2_ov42h"]
+
+[node name="The Soiled" instance=ExtResource("1_q2wti")]
+script = ExtResource("2_gmh4l")
+card_name = "The Soiled"
+cost = 5
+hp = 30
+attack = 2
+x = 2
+target = 1
+colour = 3
+ability = "DIE IN BATTLE: Summon a Poop"
+upgradedAbility = "DIE IN BATTLE: Summon a Giant Poop"
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -240)
+scale = Vector2(1.04, 1.04)
+texture = ExtResource("2_ov42h")

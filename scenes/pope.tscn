@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyuyk4hujm3qj"]
+[gd_scene load_steps=4 format=3 uid="uid://yy4pkkwm47ku"]
 
 [ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_l44it"]
 [ext_resource type="Script" path="res://scripts/friends/pope.gd" id="2_sq4fy"]
@@ -13,8 +13,8 @@ attack = 4
 x = 2
 target = 3
 colour = 2
-ability = "DIES IN BATTLE: Spawn a Conclave friend"
-upgradedAbility = "DIES IN BATTLE: Spawn an Upgraded Conclave friend"
+ability = "DIE IN BATTLE: Summon a Conclave friend"
+upgradedAbility = "DIE IN BATTLE: Summon an Upgraded Conclave friend"
 
 [node name="image" parent="." index="1"]
 scale = Vector2(1.1, 1.1)

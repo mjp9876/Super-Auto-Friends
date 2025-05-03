@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://c312mg84fxn6a"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_jyngv"]
+[ext_resource type="Script" path="res://scripts/friends/wordle.gd" id="2_acyy0"]
+[ext_resource type="Texture2D" uid="uid://p7wrbgmvviss" path="res://assets/friends/Wordle.png" id="2_difd8"]
+
+[node name="Wordle" instance=ExtResource("1_jyngv")]
+script = ExtResource("2_acyy0")
+card_name = "Wordle"
+cost = 6
+hp = 22
+attack = 1
+x = 3
+colour = 1
+ability = "BUY: Select a secret position
+START BATTLE: If in secret position, turn green and gain +40 hp , +8 attack 
+WIN BATTLE: Change position"
+upgradedAbility = "BUY: Select a secret position
+START BATTLE: If in secret position, turn green and gain +60 hp , +12 attack , +2 X 
+WIN BATTLE: Change position"
+catagory = 4
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -238)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_difd8")
+
+[node name="ability" parent="text" index="5"]
+theme_override_font_sizes/normal_font_size = 28

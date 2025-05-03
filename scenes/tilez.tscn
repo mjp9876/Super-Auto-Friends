@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdtpnq5p6jl5i"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_rtxuu"]
+[ext_resource type="Script" path="res://scripts/friends/tilez.gd" id="2_7uucm"]
+[ext_resource type="Texture2D" uid="uid://bblc8umorxrux" path="res://assets/friends/Tilez.png" id="2_emxbc"]
+
+[node name="Tilez" instance=ExtResource("1_rtxuu")]
+script = ExtResource("2_7uucm")
+card_name = "Tilez"
+cost = 7
+hp = 28
+attack = 4
+x = 2
+target = 3
+colour = 3
+ability = "BEFORE ATTACK: Deal 12 attack to opponents of a different colour, then make them this colour"
+upgradedAbility = "BEFORE ATTACK: Deal 25 attack to opponents of a different colour, then make them this colour"
+catagory = 4
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -238)
+scale = Vector2(0.168, 0.168)
+texture = ExtResource("2_emxbc")
+
+[node name="ability" parent="text" index="5"]
+offset_top = 119.0

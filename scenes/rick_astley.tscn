@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8on40kcs2iey"]
+
+[ext_resource type="PackedScene" uid="uid://4nomrhfh7i7l" path="res://scenes/card.tscn" id="1_7rjcg"]
+[ext_resource type="Texture2D" uid="uid://cq5iwnoinabcq" path="res://assets/friends/Rick Astley.png" id="2_80v5v"]
+[ext_resource type="Script" path="res://scripts/friends/rick_astley.gd" id="2_wb6ns"]
+
+[node name="Rick Astley" instance=ExtResource("1_7rjcg")]
+script = ExtResource("2_wb6ns")
+card_name = "Rick Astley"
+cost = 6
+hp = 14
+attack = 2
+x = 3
+ability = "DIE IN BATTLE: 50% chance to summon a Rickroll"
+upgradedAbility = "DIE IN BATTLE: 75% chance to summon a Rickroll+"
+catagory = 8
+
+[node name="image" parent="." index="1"]
+position = Vector2(2.08165e-12, -240)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_80v5v")
