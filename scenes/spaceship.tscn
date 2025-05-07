@@ -13,8 +13,8 @@ attack = 1
 x = 3
 target = 1
 colour = 1
-ability = "START BATTLE: +5 hp +1 attack for each red friend in your team"
-upgradedAbility = "START BATTLE: +5 hp +1 attack for each red or yellow friend in your team"
+ability = "START BATTLE: +7 hp +1 attack for each red friend in your team"
+upgradedAbility = "START BATTLE: +7 hp +1 attack for each red or yellow friend in your team"
 
 [node name="image" parent="." index="1"]
 position = Vector2(2.08165e-12, -236)

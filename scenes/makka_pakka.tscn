@@ -7,16 +7,16 @@
 [node name="Makka Pakka" instance=ExtResource("1_xcpik")]
 script = ExtResource("2_f8bs5")
 card_name = "Makka Pakka"
-cost = 7
+cost = 8
 hp = 33
-attack = 2
+attack = 1
 x = 2
 target = 2
 colour = 2
 ability = "START TURN: Change when the below ability triggers
-END TURN: +1 attack"
+END TURN: +2 attack"
 upgradedAbility = "START TURN: Change when the below ability triggers
-END TURN: +5 hp , +1 attack"
+END TURN: +5 hp , +2 attack"
 
 [node name="image" parent="." index="1"]
 position = Vector2(2.08165e-12, -240)

@@ -9,8 +9,8 @@ func start_battle():
 			stat_multiplier += find_colour_team_mates(arena_scene, colours.YELLOW)
 		if stat_multiplier >= 1:
 			proc()
-			hp += 5 * stat_multiplier
-			Manager.move_symbol(global_position, global_position, most_hp_target_texture, str(stat_multiplier * 5))
+			hp += 7 * stat_multiplier
+			Manager.move_symbol(global_position, global_position, most_hp_target_texture, str(stat_multiplier * 7))
 			await get_tree().create_timer(0.2).timeout
 			attack += stat_multiplier
 			Manager.move_symbol(global_position, global_position, most_attack_target_texture, str(stat_multiplier))

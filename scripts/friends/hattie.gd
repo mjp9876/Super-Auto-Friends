@@ -4,10 +4,10 @@ extends Card
 func end_turn():
 	if not blocked_ability:
 		var hp_to_give = 4
-		var cost_threshold = 6
+		var cost_threshold = 7
 		if upgraded:
 			hp_to_give = 7
-			cost_threshold = 8
+			cost_threshold = 11
 		Manager.update_friends()
 		for friend in Manager.friends:
 			if friend != null and (friend.leader or friend.cost <= cost_threshold):

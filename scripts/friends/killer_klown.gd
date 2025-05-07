@@ -6,12 +6,12 @@ func kill(_dead_team, _dead_team_index):
 		var arena_scene = get_tree().get_first_node_in_group("arena")
 		var possible_targets = []
 		var damage_to_deal_to_friend = 2
-		var damage_to_deal_to_opponents = 10
+		var damage_to_deal_to_opponents = 18
 		var friend_behind
 		var need_to_proc = false
 		if upgraded:
 			damage_to_deal_to_friend = 1
-			damage_to_deal_to_opponents = 18
+			damage_to_deal_to_opponents = 32
 		match team_number:
 			1:
 				friend_behind = find_friend_behind(arena_scene.p1cards)

@@ -13,8 +13,7 @@ attack = 3
 x = 3
 colour = 3
 ability = "reroll_icon : +1 coin for each tabletop game in your team"
-upgradedAbility = "reroll_icon : +1 coin for each tabletop game in your team
-FRIEND USES ITEM: reroll_icon"
+upgradedAbility = "reroll_icon : +2 coin for each tabletop game in your team"
 catagory = 1
 
 [node name="image" parent="." index="1"]

@@ -7,7 +7,7 @@
 [node name="Mist" instance=ExtResource("1_7wyub")]
 script = ExtResource("2_bt34c")
 card_name = "Mist"
-cost = 12
+cost = 10
 hp = 36
 attack = 4
 x = 6

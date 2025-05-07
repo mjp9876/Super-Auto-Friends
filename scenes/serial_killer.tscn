@@ -7,7 +7,7 @@
 [node name="Serial Killer" instance=ExtResource("1_dsiw2")]
 script = ExtResource("2_yy3kv")
 card_name = "Serial Killer"
-cost = 9
+cost = 8
 hp = 31
 attack = 3
 x = 4

@@ -2,7 +2,7 @@ extends Card
 
 
 func buy_card(card_bought):
-	if not blocked_ability and card_bought.colour == colours.YELLOW:
+	if not blocked_ability and (card_bought.colour == colours.YELLOW or (card_bought.colour == colours.BLUE and upgraded)):
 		proc()
 		if upgraded:
 			card_bought.upgraded = true

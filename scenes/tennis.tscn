@@ -8,7 +8,7 @@
 script = ExtResource("2_tlcc0")
 card_name = "Tennis"
 cost = 3
-hp = 17
+hp = 14
 attack = 1
 x = 3
 colour = 2

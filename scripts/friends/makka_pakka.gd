@@ -3,8 +3,8 @@ extends Card
 
 func start_turn():
 	options.shuffle()
-	ability = "START TURN: Change when the below ability triggers\n" + options[0] + ": +1 attack"
-	upgradedAbility = "START TURN: Change when the below ability triggers\n" + options[0] + ": +5 hp , +1 attack"
+	ability = "START TURN: Change when the below ability triggers\n" + options[0] + ": +2 attack"
+	upgradedAbility = "START TURN: Change when the below ability triggers\n" + options[0] + ": +5 hp , +2 attack"
 	setAbilityText()
 	await proc()
 
@@ -17,8 +17,8 @@ func ability_function():
 		hp += 5
 		Manager.move_symbol(global_position, global_position, most_hp_target_texture, "5")
 		await get_tree().create_timer(0.2).timeout
-	attack += 1
-	Manager.move_symbol(global_position, global_position, most_attack_target_texture, "1")
+	attack += 2
+	Manager.move_symbol(global_position, global_position, most_attack_target_texture, "2")
 	setStatText()
 	await proc()
 

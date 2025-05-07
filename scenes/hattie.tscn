@@ -12,8 +12,8 @@ hp = 44
 attack = 5
 x = 2
 target = 2
-ability = "END TURN: Give leader and friends 6 coin or cheaper +4 hp"
-upgradedAbility = "END TURN: Give leader and friends 8 coin or cheaper +7 hp"
+ability = "END TURN: Give leader and friends 7 coin or cheaper +4 hp"
+upgradedAbility = "END TURN: Give leader and friends 11 coin or cheaper +7 hp"
 
 [node name="image" parent="." index="1"]
 position = Vector2(2.08165e-12, -233)

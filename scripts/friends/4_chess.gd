@@ -21,15 +21,15 @@ func end_turn():
 		for friend in target_friends:
 			proc()
 			if upgraded:
-				friend.hp += 2
+				friend.hp += 3
 				friend.attack += 1
-				Manager.move_symbol(global_position, friend.global_position, most_hp_target_texture, "2")
+				Manager.move_symbol(global_position, friend.global_position, most_hp_target_texture, "3")
 				await get_tree().create_timer(0.2).timeout
 				Manager.move_symbol(global_position, friend.global_position, most_attack_target_texture, "1")
 				friend.setStatText()
 			else:
-				friend.hp += 3
-				Manager.move_symbol(global_position, friend.global_position, most_hp_target_texture, "3")
+				friend.hp += 4
+				Manager.move_symbol(global_position, friend.global_position, most_hp_target_texture, "4")
 				await get_tree().create_timer(0.2).timeout
 				friend.setStatText()
 		await proc()

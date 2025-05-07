@@ -22,8 +22,8 @@ func hurt(hurter):
 					this_x = x
 				target = targets.MOST_HP
 				colour = colours.RED
-				ability = "HURT: Remove 40% hp from the card that hurt this"
-				upgradedAbility = "HURT: Remove 60% hp from the card that hurt this"
+				ability = "HURT: Remove 33% hp from the card that hurt this"
+				upgradedAbility = "HURT: Remove 50% hp from the card that hurt this"
 				image.texture = load("res://assets/friends/Rickroll.png")
 				image.scale = Vector2(0.6,0.6)
 				setStatText()
@@ -33,9 +33,9 @@ func hurt(hurter):
 				await proc()
 				await Manager.card_summoned(team_number, self)
 	elif not blocked_ability and card_name == "Rickroll" and hurter.hp > 1:
-		var hp_to_reduce = 0.4
+		var hp_to_reduce = 0.33
 		if upgraded:
-			hp_to_reduce = 0.6
+			hp_to_reduce = 0.5
 		quick_proc()
 		await reduce_hp(hurter, hp_to_reduce)
 		await quick_proc()

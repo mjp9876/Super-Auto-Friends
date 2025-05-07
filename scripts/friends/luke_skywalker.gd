@@ -1,7 +1,7 @@
 extends Card
 
 
-func reroll():
+func start_turn():
 	if not blocked_ability:
 		var shop_slots = [0, 1, 2, 3, 4]
 		proc()

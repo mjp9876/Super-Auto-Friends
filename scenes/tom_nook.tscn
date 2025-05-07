@@ -7,13 +7,13 @@
 [node name="Tom Nook" instance=ExtResource("1_y1eqc")]
 script = ExtResource("2_gq76m")
 card_name = "Tom Nook"
-cost = 5
+cost = 6
 hp = 9
 attack = 2
 x = 3
 colour = 1
-ability = "END TURN: Lose all your coin , then give +3 hp to a random friend for each coin lost"
-upgradedAbility = "END TURN: Lose all your coin , then give +6 hp to a random friend for each coin lost"
+ability = "END TURN: Lose all your coin , then give +4 hp to a random friend for each coin lost"
+upgradedAbility = "END TURN: Lose all your coin , then give +8 hp to a random friend for each coin lost"
 
 [node name="image" parent="." index="1"]
 position = Vector2(2.08165e-12, -227)

@@ -7,7 +7,7 @@
 [node name="Weed" instance=ExtResource("1_5lw58")]
 script = ExtResource("2_kg0cb")
 card_name = "Weed"
-cost = 7
+cost = 5
 colour = 4
 ability = "Remove ability, +2 attack"
 

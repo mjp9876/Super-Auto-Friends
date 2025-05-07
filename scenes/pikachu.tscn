@@ -14,7 +14,7 @@ x = 4
 target = 5
 colour = 3
 ability = "BUY YELLOW CARD: Give it +8 hp +1 attack"
-upgradedAbility = "BUY YELLOW CARD: Upgrade it and give it +8 hp +1 attack"
+upgradedAbility = "BUY YELLOW OR BLUE CARD: Upgrade it and give it +8 hp +1 attack"
 catagory = 11
 
 [node name="image" parent="." index="1"]

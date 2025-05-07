@@ -2,7 +2,7 @@ extends Card
 
 
 func reroll():
-	if not blocked_ability:
+	if not blocked_ability and shopScene.reroll_cost <= 2:
 		var shop_slots = [0, 1, 2, 3, 4]
 		proc()
 		await get_tree().create_timer(0.3).timeout

@@ -4,10 +4,10 @@ extends Card
 func end_turn():
 	if not blocked_ability and Manager.money > 0:
 		var target_friend = null
-		var hp_to_give = 3
+		var hp_to_give = 4
 		var times_to_give_hp = Manager.money
 		if upgraded:
-			hp_to_give = 6
+			hp_to_give = 8
 		Manager.money = 0
 		shopScene.updateText()
 		await Manager.move_symbol(shopScene.money_img.global_position, global_position, coin_icon, str(times_to_give_hp))

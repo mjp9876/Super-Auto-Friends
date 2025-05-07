@@ -13,8 +13,8 @@ attack = 4
 x = 2
 target = 1
 colour = 2
-ability = "END TURN: Give one random other card of each colour +3 hp"
-upgradedAbility = "END TURN: Give one random other card of each colour +2 hp +1 attack"
+ability = "END TURN: Give one random other card of each colour +4 hp"
+upgradedAbility = "END TURN: Give one random other card of each colour +3 hp +1 attack"
 catagory = 4
 
 [node name="image" parent="." index="1"]

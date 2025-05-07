@@ -13,9 +13,9 @@ attack = 6
 x = 2
 target = 6
 colour = 3
-ability = "reroll_icon : Give blue cards in the shop +n (N) hp 
+ability = "START TURN : Give blue cards in the shop +n (N) hp 
 END TURN: n + 4 (Maximum 20)"
-upgradedAbility = "reroll_icon : Give blue cards in the shop +n (N) hp 
+upgradedAbility = "START TURN : Give blue cards in the shop +n (N) hp 
 END TURN: n + 8 (Maximum 30)"
 n = 7
 

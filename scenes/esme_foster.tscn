@@ -7,13 +7,13 @@
 [node name="Esme Foster" instance=ExtResource("1_u1ip6")]
 script = ExtResource("2_awnqb")
 card_name = "Esme Foster"
-cost = 8
+cost = 10
 hp = 33
 attack = 1
 x = 4
 target = 2
-ability = "FRIEND AHEAD ATTACKS: +2 attack"
-upgradedAbility = "FRIEND AHEAD ATTACKS: +4 attack"
+ability = "FRIEND AHEAD ATTACKS: +3 attack"
+upgradedAbility = "FRIEND AHEAD ATTACKS: +6 attack"
 
 [node name="image" parent="." index="1"]
 scale = Vector2(0.45, 0.45)

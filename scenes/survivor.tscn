@@ -13,9 +13,9 @@ attack = 5
 x = 1
 target = 5
 colour = 1
-ability = "AFTER ATTACK: n (N) - 1, If hp < 0 and n (N) > 0: hp = 4"
+ability = "AFTER ATTACK: n (N) - 1, If dead and n (N) > 0: revive with 4 hp"
 upgradedAbility = "START BATTLE: n + 2
-AFTER ATTACK: n (N) - 1, If hp < 0 and n (N) > 0: hp = 24"
+AFTER ATTACK: n (N) - 1, If dead and n (N) > 0: revive with 24 hp"
 n = 4
 catagory = 2
 

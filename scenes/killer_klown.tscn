@@ -7,13 +7,13 @@
 [node name="Killer Klown" instance=ExtResource("1_i2fmj")]
 script = ExtResource("2_5b3lk")
 card_name = "Killer Klown"
-cost = 7
+cost = 8
 hp = 42
 attack = 8
 x = 2
 target = 1
-ability = "KILL: Deal 2 attack to friend behind and 10 attack to active opponents"
-upgradedAbility = "KILL: Deal 1 attack to friend behind and 18 attack to active opponents"
+ability = "KILL: Deal 2 attack to friend behind and 18 attack to active opponents"
+upgradedAbility = "KILL: Deal 1 attack to friend behind and 32 attack to active opponents"
 
 [node name="image" parent="." index="1"]
 position = Vector2(2.08165e-12, -232)
